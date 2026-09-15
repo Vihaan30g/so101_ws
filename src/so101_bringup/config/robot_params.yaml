@@ -1,0 +1,78 @@
+# Shared parameters loaded by every node that constructs a
+# so101_kinematics::So101Kinematics instance (cartesian_controller_node,
+# safety_gate_node). Per the design doc §4: the URDF path and joint
+# groupings live in ONE parameter file, never hardcoded in application
+# code, so there's exactly one place to update if the robot description
+# or joint split changes.
+#
+# NOTE: node names below (so101_kinematics, cartesian_controller_node,
+# safety_gate_node) are placeholders matching the design doc. Once those
+# nodes exist, confirm these ros__parameters blocks are keyed under each
+# node's ACTUAL node name (ROS2 params are per-node, not global) -- adjust
+# if you name the executables/nodes differently.
+#
+# Joint/frame names below are from the REAL so101_new_calib.urdf
+# (TheRobotStudio/SO-ARM100), not the earlier j1..j5 placeholder:
+#
+#   Real joints (in kinematic-chain order):
+#     shoulder_pan -> shoulder_lift -> elbow_flex -> wrist_flex -> wrist_roll -> gripper
+#
+#   Mapped onto the design doc's "j1..j5" split:
+#     j1 = shoulder_pan   \
+#     j2 = shoulder_lift    > translational_joints -- Cartesian/DLS-IK controlled
+#     j3 = elbow_flex     /
+#     j4 = wrist_flex     \
+#     j5 = wrist_roll       > wrist_joints -- direct teleop passthrough (no IK)
+#
+#   `gripper` is a 6th joint (jaw open/close) that the original 5-joint
+#   design doc never accounted for -- it is NOT in either list below.
+#   It needs its own simple open/close handling wherever teleop input is
+#   produced (so101_input_keyboard) and wherever JointCommand is built and
+#   consumed (cartesian_controller_node, so101_safety, hardware_interface)
+#   -- flag this explicitly for whoever implements those nodes next, see
+#   HANDOFF.md.
+#
+#   end_effector_frame = "gripper_frame_link" -- chosen over "gripper_link"
+#   / "moving_jaw_so101_v1_link" because the URDF has a dedicated
+#   gripper_frame_joint, which strongly suggests it's a purpose-built
+#   tool-center-point frame rather than a physical body link. Worth a
+#   visual sanity check in RViz once you can view the model, but this is
+#   the correct default choice.
+
+so101_kinematics:
+  ros__parameters:
+    urdf_path: "$(find-pkg-share so101_description)/urdf/so101.urdf"
+    end_effector_frame: "gripper_frame_link"
+    translational_joints: ["shoulder_pan", "shoulder_lift", "elbow_flex"]
+    wrist_joints: ["wrist_flex", "wrist_roll"]
+
+cartesian_controller_node:
+  ros__parameters:
+    urdf_path: "$(find-pkg-share so101_description)/urdf/so101.urdf"
+    end_effector_frame: "gripper_frame_link"
+    translational_joints: ["shoulder_pan", "shoulder_lift", "elbow_flex"]
+    wrist_joints: ["wrist_flex", "wrist_roll"]
+
+    control_rate_hz: 200.0          # verify against your Feetech bus's real
+                                     # achievable command rate first (§9)
+    cartesian_cmd_timeout_ms: 200   # "user let go" -> command zero velocity
+    controller_output_timeout_ms: 100  # consumed by safety_gate_node, not this node
+
+    dls_lambda0: 0.05
+    manipulability_threshold: 0.02
+
+    # gripper joint is NOT handled by the Cartesian/wrist split above --
+    # not implemented yet, see HANDOFF.md.
+    gripper_joint: "gripper"
+
+safety_gate_node:
+  ros__parameters:
+    urdf_path: "$(find-pkg-share so101_description)/urdf/so101.urdf"
+    end_effector_frame: "gripper_frame_link"
+    translational_joints: ["shoulder_pan", "shoulder_lift", "elbow_flex"]
+    wrist_joints: ["wrist_flex", "wrist_roll"]
+
+    joint_cmd_timeout_ms: 100   # controller output staleness -> zero velocity (§7, §9)
+    manipulability_hard_floor: 0.005  # below this even after DLS damping -> zero translational cmd
+
+    gripper_joint: "gripper"
