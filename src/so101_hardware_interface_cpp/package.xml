@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://download.ros.org/schema/package_format3.xsd"?>
+<package format="3">
+  <name>so101_hardware_interface_cpp</name>
+  <version>0.0.1</version>
+  <description>
+    C++/ament_cmake replacement for so101_hardware_interface (the
+    ament_python version). Bridges the real SO-101 Feetech servo bus to
+    ROS 2 by EMBEDDING the Python interpreter and calling LeRobot's
+    SOFollower driver from C++ via the raw CPython C-API -- SOFollower
+    itself is Python-only, so this is the way to use it from a
+    control-critical C++ node without reimplementing the Feetech bus
+    protocol from scratch.
+
+    Requires python3-dev (for Python.h / libpython) at build time -- not
+    a rosdep key, install manually:  sudo apt install python3-dev
+    Same category of exception as robotpkg-pinocchio: found via CMake's
+    FindPython3, not a package.xml depend tag.
+
+    At runtime, point the "venv_site_packages" parameter at the
+    site-packages directory of whatever Python environment has `lerobot`
+    installed (e.g. a `python3 -m venv --system-site-packages` venv built
+    on the SAME system Python ROS was built against, so compiled
+    extensions like torch load correctly under the embedded interpreter).
+  </description>
+  <maintainer email="you@example.com">your_name</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>so101_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>diagnostic_msgs</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

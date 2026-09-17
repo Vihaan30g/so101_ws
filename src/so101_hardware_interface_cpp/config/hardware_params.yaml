@@ -1,0 +1,31 @@
+# Params for hardware_interface_node (C++ version).
+#
+# venv_site_packages: REQUIRED unless lerobot is installed on the exact
+# system Python ROS 2 was built against. Point this at the
+# site-packages directory of the venv/env that has `lerobot` installed,
+# e.g.:
+#   /home/youruser/so101_venv/lib/python3.10/site-packages
+# Find it with: python3 -c "import lerobot, os; print(os.path.dirname(os.path.dirname(lerobot.__file__)))"
+# (run that INSIDE the env that has lerobot installed).
+#
+# control_rate_hz: nominal only -- see hardware_interface_node.cpp,
+# actual integration uses measured dt each tick, not this value directly.
+# Watch /diagnostics for WARN-level tick-overrun messages and lower this
+# if you see them repeatedly.
+hardware_interface_node:
+  ros__parameters:
+    port: "/dev/ttyACM0"
+    robot_id: "vihu2"
+    venv_site_packages: ""   # <-- FILL THIS IN, see note above
+    control_rate_hz: 100.0
+
+    joint_names:
+      - "shoulder_pan"
+      - "shoulder_lift"
+      - "elbow_flex"
+      - "wrist_flex"
+      - "wrist_roll"
+      - "gripper"
+
+    joint_cmd_timeout_ms: 100
+    tick_overrun_warn_ratio: 1.5
