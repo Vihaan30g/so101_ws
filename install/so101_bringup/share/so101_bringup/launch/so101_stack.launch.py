@@ -1,1 +1,0 @@
-/home/marsuser/so101_ws/src/so101_bringup/launch/so101_stack.launch.py

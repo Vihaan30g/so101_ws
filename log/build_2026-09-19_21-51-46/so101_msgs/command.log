@@ -1,4 +1,0 @@
-Invoking command in '/home/marsuser/so101_ws/build/so101_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/marsuser/so101_ws/src/so101_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/marsuser/so101_ws/install/so101_msgs
-Invoked command in '/home/marsuser/so101_ws/build/so101_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/marsuser/so101_ws/src/so101_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/marsuser/so101_ws/install/so101_msgs
-Invoking command in '/home/marsuser/so101_ws/build/so101_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/marsuser/so101_ws/build/so101_msgs -- -j32 -l32
-Invoked command in '/home/marsuser/so101_ws/build/so101_msgs' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/marsuser/so101_ws/build/so101_msgs -- -j32 -l32

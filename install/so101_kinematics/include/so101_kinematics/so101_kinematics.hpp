@@ -1,1 +1,0 @@
-/home/marsuser/so101_ws/src/so101_kinematics/include/so101_kinematics/so101_kinematics.hpp

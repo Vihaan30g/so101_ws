@@ -1,1 +1,0 @@
-/home/marsuser/so101_ws/build/so101_msgs/rosidl_typesupport_fastrtps_cpp/so101_msgs/msg/detail/cartesian_command__rosidl_typesupport_fastrtps_cpp.hpp

@@ -1,1 +1,0 @@
-/home/marsuser/so101_ws/build/so101_description/ament_cmake_core/so101_descriptionConfig-version.cmake

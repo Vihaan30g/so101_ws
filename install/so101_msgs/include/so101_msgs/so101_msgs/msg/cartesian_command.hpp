@@ -1,1 +1,0 @@
-/home/marsuser/so101_ws/build/so101_msgs/rosidl_generator_cpp/so101_msgs/msg/cartesian_command.hpp
