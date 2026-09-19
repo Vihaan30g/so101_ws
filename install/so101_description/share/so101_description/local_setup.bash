@@ -1,0 +1,1 @@
+/home/marsuser/so101_ws/build/so101_description/ament_cmake_environment_hooks/local_setup.bash

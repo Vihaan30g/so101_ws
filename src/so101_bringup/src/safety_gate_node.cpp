@@ -46,6 +46,8 @@ public:
     gripper_joint_ = declare_parameter<std::string>("gripper_joint", "gripper");
     joint_timeout_ms_ = declare_parameter<int>("joint_cmd_timeout_ms", 100);
     manipulability_floor_ = declare_parameter<double>("manipulability_hard_floor", 0.005);
+    measured_position_tolerance_rad_ = declare_parameter<double>(
+      "measured_position_tolerance_rad", 0.02);
 
     if (urdf_path_.empty()) {
       RCLCPP_FATAL(get_logger(), "urdf_path parameter is empty; refusing to start safety gate.");
@@ -197,7 +199,8 @@ private:
       const int idx_q = kin_->model().joints[jid].idx_q();
       if (idx_q >= 0 && idx_q < q.size()) {
         const double qv = q[idx_q];
-        if (qv < lower[idx_q] || qv > upper[idx_q]) {
+        if (qv < lower[idx_q] - measured_position_tolerance_rad_ ||
+            qv > upper[idx_q] + measured_position_tolerance_rad_) {
           error = "current joint position is outside its URDF limits";
           return false;
         }
@@ -268,6 +271,7 @@ private:
   std::vector<std::string> joint_names_;
   int joint_timeout_ms_{100};
   double manipulability_floor_{0.005};
+  double measured_position_tolerance_rad_{0.02};
 
   std::unique_ptr<so101_kinematics::So101Kinematics> kin_;
 

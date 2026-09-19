@@ -1,0 +1,931 @@
+[0.000000] (-) TimerEvent: {}
+[0.000178] (so101_description) JobQueued: {'identifier': 'so101_description', 'dependencies': OrderedDict()}
+[0.000261] (so101_kinematics) JobQueued: {'identifier': 'so101_kinematics', 'dependencies': OrderedDict()}
+[0.000280] (so101_msgs) JobQueued: {'identifier': 'so101_msgs', 'dependencies': OrderedDict()}
+[0.000293] (so101_bringup) JobQueued: {'identifier': 'so101_bringup', 'dependencies': OrderedDict([('so101_description', '/home/marsuser/so101_ws/install/so101_description'), ('so101_kinematics', '/home/marsuser/so101_ws/install/so101_kinematics'), ('so101_msgs', '/home/marsuser/so101_ws/install/so101_msgs')])}
+[0.000313] (so101_description) JobStarted: {'identifier': 'so101_description'}
+[0.005727] (so101_kinematics) JobStarted: {'identifier': 'so101_kinematics'}
+[0.008022] (so101_msgs) JobStarted: {'identifier': 'so101_msgs'}
+[0.010664] (so101_description) JobProgress: {'identifier': 'so101_description', 'progress': 'cmake'}
+[0.010954] (so101_description) Command: {'cmd': ['/usr/bin/cmake', '/home/marsuser/so101_ws/src/so101_description', '-DCMAKE_INSTALL_PREFIX=/home/marsuser/so101_ws/install/so101_description'], 'cwd': '/home/marsuser/so101_ws/build/so101_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'marsuser'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/opt/openrobots/lib:'), ('HOME', '/home/marsuser'), ('OLDPWD', '/home/marsuser/so101_ws/src/so101_msgs'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2768'), ('SYSTEMD_EXEC_PID', '3260'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '8056'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'marsuser'), ('JOURNAL_STREAM', '8:31154'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/openrobots/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'marsuser'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda/bin:/opt/openrobots/bin:/home/marsuser/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/marsnew:@/tmp/.ICE-unix/3086,unix/marsnew:/tmp/.ICE-unix/3086'), ('INVOCATION_ID', '3e6f269566e14822a468b397cf86b7a8'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('TERMINATOR_UUID', 'urn:uuid:a05ea11a-b9ec-44cb-993c-7ef4875380d9'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', ':/home/marsuser/urdf_ws/install/rovermk2_description/share:/home/marsuser/urdf_ws/install/manipmk1_description/share'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/marsuser/so101_ws/build/so101_description'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/marsuser/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/opt/openrobots/lib/python3.10/site-packages:'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/openrobots::/opt/ros/humble')]), 'shell': False}
+[0.013217] (so101_kinematics) JobProgress: {'identifier': 'so101_kinematics', 'progress': 'cmake'}
+[0.014000] (so101_kinematics) Command: {'cmd': ['/usr/bin/cmake', '/home/marsuser/so101_ws/src/so101_kinematics', '-DCMAKE_INSTALL_PREFIX=/home/marsuser/so101_ws/install/so101_kinematics'], 'cwd': '/home/marsuser/so101_ws/build/so101_kinematics', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'marsuser'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/opt/openrobots/lib:'), ('HOME', '/home/marsuser'), ('OLDPWD', '/home/marsuser/so101_ws/src/so101_msgs'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2768'), ('SYSTEMD_EXEC_PID', '3260'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '8056'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'marsuser'), ('JOURNAL_STREAM', '8:31154'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/openrobots/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'marsuser'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda/bin:/opt/openrobots/bin:/home/marsuser/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/marsnew:@/tmp/.ICE-unix/3086,unix/marsnew:/tmp/.ICE-unix/3086'), ('INVOCATION_ID', '3e6f269566e14822a468b397cf86b7a8'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('TERMINATOR_UUID', 'urn:uuid:a05ea11a-b9ec-44cb-993c-7ef4875380d9'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', ':/home/marsuser/urdf_ws/install/rovermk2_description/share:/home/marsuser/urdf_ws/install/manipmk1_description/share'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/marsuser/so101_ws/build/so101_kinematics'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/marsuser/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/opt/openrobots/lib/python3.10/site-packages:'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/openrobots::/opt/ros/humble')]), 'shell': False}
+[0.015625] (so101_msgs) JobProgress: {'identifier': 'so101_msgs', 'progress': 'cmake'}
+[0.015930] (so101_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/marsuser/so101_ws/src/so101_msgs', '-DCMAKE_INSTALL_PREFIX=/home/marsuser/so101_ws/install/so101_msgs'], 'cwd': '/home/marsuser/so101_ws/build/so101_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'marsuser'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/opt/openrobots/lib:'), ('HOME', '/home/marsuser'), ('OLDPWD', '/home/marsuser/so101_ws/src/so101_msgs'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2768'), ('SYSTEMD_EXEC_PID', '3260'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '8056'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'marsuser'), ('JOURNAL_STREAM', '8:31154'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/openrobots/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'marsuser'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda/bin:/opt/openrobots/bin:/home/marsuser/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/marsnew:@/tmp/.ICE-unix/3086,unix/marsnew:/tmp/.ICE-unix/3086'), ('INVOCATION_ID', '3e6f269566e14822a468b397cf86b7a8'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('TERMINATOR_UUID', 'urn:uuid:a05ea11a-b9ec-44cb-993c-7ef4875380d9'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', ':/home/marsuser/urdf_ws/install/rovermk2_description/share:/home/marsuser/urdf_ws/install/manipmk1_description/share'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/marsuser/so101_ws/build/so101_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/marsuser/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/opt/openrobots/lib/python3.10/site-packages:'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/openrobots::/opt/ros/humble')]), 'shell': False}
+[0.091411] (so101_description) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.091635] (so101_kinematics) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.091714] (so101_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099364] (-) TimerEvent: {}
+[0.148891] (so101_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.149095] (so101_description) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.149203] (so101_kinematics) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.156030] (so101_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.156120] (so101_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.156233] (so101_kinematics) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.199472] (-) TimerEvent: {}
+[0.210540] (so101_kinematics) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.210699] (so101_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.210794] (so101_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.215110] (so101_kinematics) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.215246] (so101_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.215338] (so101_description) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.215422] (so101_kinematics) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.215502] (so101_description) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.215582] (so101_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.215858] (so101_description) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.215938] (so101_kinematics) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.216005] (so101_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.218409] (so101_kinematics) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.218467] (so101_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.218513] (so101_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.278433] (so101_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.278599] (so101_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.278707] (so101_kinematics) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.283069] (so101_description) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.283176] (so101_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.283280] (so101_description) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.283374] (so101_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.283578] (so101_description) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.283657] (so101_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.286679] (so101_kinematics) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.286983] (so101_kinematics) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.287458] (so101_kinematics) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.289539] (so101_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.289630] (so101_description) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.291348] (so101_kinematics) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.299525] (-) TimerEvent: {}
+[0.396176] (so101_description) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.396383] (so101_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.398180] (so101_kinematics) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.399604] (-) TimerEvent: {}
+[0.493354] (so101_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.497260] (so101_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.499685] (-) TimerEvent: {}
+[0.505091] (so101_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.535073] (so101_kinematics) StdoutLine: {'line': b'-- Found Boost: /usr/include (found version "1.74.0") found components: filesystem serialization \n'}
+[0.536017] (so101_kinematics) StdoutLine: {'line': b'-- coal FOUND. coal at /opt/openrobots/lib/libcoal.so\n'}
+[0.537784] (so101_description) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.539620] (so101_kinematics) StdoutLine: {'line': b'-- Found Boost: /usr/include (found version "1.74.0") found components: serialization filesystem \n'}
+[0.539815] (so101_description) StdoutLine: {'line': b'-- Generating done\n'}
+[0.540979] (so101_description) StdoutLine: {'line': b'-- Build files have been written to: /home/marsuser/so101_ws/build/so101_description\n'}
+[0.544547] (so101_description) CommandEnded: {'returncode': 0}
+[0.544985] (so101_description) JobProgress: {'identifier': 'so101_description', 'progress': 'build'}
+[0.545476] (so101_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/marsuser/so101_ws/build/so101_description', '--', '-j32', '-l32'], 'cwd': '/home/marsuser/so101_ws/build/so101_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'marsuser'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/opt/openrobots/lib:'), ('HOME', '/home/marsuser'), ('OLDPWD', '/home/marsuser/so101_ws/src/so101_msgs'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2768'), ('SYSTEMD_EXEC_PID', '3260'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '8056'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'marsuser'), ('JOURNAL_STREAM', '8:31154'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/openrobots/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'marsuser'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda/bin:/opt/openrobots/bin:/home/marsuser/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/marsnew:@/tmp/.ICE-unix/3086,unix/marsnew:/tmp/.ICE-unix/3086'), ('INVOCATION_ID', '3e6f269566e14822a468b397cf86b7a8'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('TERMINATOR_UUID', 'urn:uuid:a05ea11a-b9ec-44cb-993c-7ef4875380d9'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', ':/home/marsuser/urdf_ws/install/rovermk2_description/share:/home/marsuser/urdf_ws/install/manipmk1_description/share'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/marsuser/so101_ws/build/so101_description'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/marsuser/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/opt/openrobots/lib/python3.10/site-packages:'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/openrobots::/opt/ros/humble')]), 'shell': False}
+[0.547896] (so101_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.574390] (so101_description) CommandEnded: {'returncode': 0}
+[0.574818] (so101_description) JobProgress: {'identifier': 'so101_description', 'progress': 'install'}
+[0.581301] (so101_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/marsuser/so101_ws/build/so101_description'], 'cwd': '/home/marsuser/so101_ws/build/so101_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'marsuser'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/opt/openrobots/lib:'), ('HOME', '/home/marsuser'), ('OLDPWD', '/home/marsuser/so101_ws/src/so101_msgs'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2768'), ('SYSTEMD_EXEC_PID', '3260'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '8056'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'marsuser'), ('JOURNAL_STREAM', '8:31154'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/openrobots/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'marsuser'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda/bin:/opt/openrobots/bin:/home/marsuser/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/marsnew:@/tmp/.ICE-unix/3086,unix/marsnew:/tmp/.ICE-unix/3086'), ('INVOCATION_ID', '3e6f269566e14822a468b397cf86b7a8'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('TERMINATOR_UUID', 'urn:uuid:a05ea11a-b9ec-44cb-993c-7ef4875380d9'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', ':/home/marsuser/urdf_ws/install/rovermk2_description/share:/home/marsuser/urdf_ws/install/manipmk1_description/share'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/marsuser/so101_ws/build/so101_description'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/marsuser/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/opt/openrobots/lib/python3.10/site-packages:'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/openrobots::/opt/ros/humble')]), 'shell': False}
+[0.585046] (so101_msgs) StdoutLine: {'line': b'-- Found std_msgs: 4.9.1 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[0.587460] (so101_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.587543] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/urdf\n'}
+[0.587651] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/urdf/so101.urdf\n'}
+[0.587777] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/meshes\n'}
+[0.587837] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/meshes/sts3215_03a_v1.stl\n'}
+[0.588733] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/meshes/wrist_roll_follower_so101_v1.stl\n'}
+[0.590004] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/meshes/wrist_camera_so101_v1.stl\n'}
+[0.590206] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/meshes/upper_arm_so101_v1.stl\n'}
+[0.591375] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/meshes/wrist_camera_mount_so101_v1.stl\n'}
+[0.591606] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/meshes/motor_holder_so101_base_v1.stl\n'}
+[0.592706] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/meshes/rotation_pitch_so101_v1.stl\n'}
+[0.593558] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/meshes/base_motor_holder_so101_v1.stl\n'}
+[0.595310] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/meshes/motor_holder_so101_wrist_v1.stl\n'}
+[0.596305] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/meshes/under_arm_so101_v1.stl\n'}
+[0.598148] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/meshes/moving_jaw_so101_v1.stl\n'}
+[0.599492] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/meshes/sts3215_03a_no_horn_v1.stl\n'}
+[0.599745] (-) TimerEvent: {}
+[0.600334] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/meshes/waveshare_mounting_plate_so101_v2.stl\n'}
+[0.600476] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/meshes/base_so101_v2.stl\n'}
+[0.600954] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/meshes/wrist_roll_pitch_so101_v2.stl\n'}
+[0.603307] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/config\n'}
+[0.603370] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/config/joint_limits.yaml\n'}
+[0.603552] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/ament_index/resource_index/package_run_dependencies/so101_description\n'}
+[0.603703] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/ament_index/resource_index/parent_prefix_path/so101_description\n'}
+[0.603843] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/environment/ament_prefix_path.sh\n'}
+[0.603956] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/environment/ament_prefix_path.dsv\n'}
+[0.604069] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/environment/path.sh\n'}
+[0.604180] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/environment/path.dsv\n'}
+[0.604287] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/local_setup.bash\n'}
+[0.604389] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/local_setup.sh\n'}
+[0.604499] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/local_setup.zsh\n'}
+[0.604603] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/local_setup.dsv\n'}
+[0.604704] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/package.dsv\n'}
+[0.604844] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/ament_index/resource_index/packages/so101_description\n'}
+[0.604978] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/cmake/so101_descriptionConfig.cmake\n'}
+[0.605066] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/cmake/so101_descriptionConfig-version.cmake\n'}
+[0.605182] (so101_description) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_description/share/so101_description/package.xml\n'}
+[0.606451] (so101_description) CommandEnded: {'returncode': 0}
+[0.610026] (so101_msgs) StdoutLine: {'line': b'-- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[0.620388] (so101_description) JobEnded: {'identifier': 'so101_description', 'rc': 0}
+[0.699815] (-) TimerEvent: {}
+[0.772853] (so101_kinematics) StdoutLine: {'line': b'-- Default C++ standard: 201703\n'}
+[0.773040] (so101_kinematics) StdoutLine: {'line': b'-- Minimal C++ standard upgraded to 11\n'}
+[0.773092] (so101_kinematics) StdoutLine: {'line': b'-- C++ standard sufficient: Minimal required 11, currently defined: 17\n'}
+[0.773802] (so101_kinematics) StdoutLine: {'line': b'-- Minimal C++ standard upgraded to 17\n'}
+[0.773896] (so101_kinematics) StdoutLine: {'line': b'-- C++ standard sufficient: Minimal required 17, currently defined: 17\n'}
+[0.777103] (so101_kinematics) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.799871] (-) TimerEvent: {}
+[0.820183] (so101_kinematics) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.830171] (so101_kinematics) StdoutLine: {'line': b'-- Generating done\n'}
+[0.832041] (so101_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[0.832129] (so101_kinematics) StdoutLine: {'line': b'-- Build files have been written to: /home/marsuser/so101_ws/build/so101_kinematics\n'}
+[0.837639] (so101_kinematics) CommandEnded: {'returncode': 0}
+[0.838043] (so101_kinematics) JobProgress: {'identifier': 'so101_kinematics', 'progress': 'build'}
+[0.838362] (so101_kinematics) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/marsuser/so101_ws/build/so101_kinematics', '--', '-j32', '-l32'], 'cwd': '/home/marsuser/so101_ws/build/so101_kinematics', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'marsuser'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/opt/openrobots/lib:'), ('HOME', '/home/marsuser'), ('OLDPWD', '/home/marsuser/so101_ws/src/so101_msgs'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2768'), ('SYSTEMD_EXEC_PID', '3260'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '8056'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'marsuser'), ('JOURNAL_STREAM', '8:31154'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/openrobots/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'marsuser'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda/bin:/opt/openrobots/bin:/home/marsuser/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/marsnew:@/tmp/.ICE-unix/3086,unix/marsnew:/tmp/.ICE-unix/3086'), ('INVOCATION_ID', '3e6f269566e14822a468b397cf86b7a8'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('TERMINATOR_UUID', 'urn:uuid:a05ea11a-b9ec-44cb-993c-7ef4875380d9'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', ':/home/marsuser/urdf_ws/install/rovermk2_description/share:/home/marsuser/urdf_ws/install/manipmk1_description/share'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/marsuser/so101_ws/build/so101_kinematics'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/marsuser/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/opt/openrobots/lib/python3.10/site-packages:'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/openrobots::/opt/ros/humble')]), 'shell': False}
+[0.875812] (so101_kinematics) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/so101_kinematics.dir/src/so101_kinematics.cpp.o\x1b[0m\n'}
+[0.899943] (-) TimerEvent: {}
+[1.000140] (-) TimerEvent: {}
+[1.006017] (so101_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.100190] (-) TimerEvent: {}
+[1.200366] (-) TimerEvent: {}
+[1.224429] (so101_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.239771] (so101_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[1.241843] (so101_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.261339] (so101_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[1.261423] (so101_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.261477] (so101_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.261534] (so101_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.275571] (so101_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[1.300439] (-) TimerEvent: {}
+[1.377268] (so101_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.400520] (-) TimerEvent: {}
+[1.406267] (so101_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[1.414481] (so101_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/marsuser/so101_ws/build/so101_msgs\n'}
+[1.420080] (so101_msgs) CommandEnded: {'returncode': 0}
+[1.420524] (so101_msgs) JobProgress: {'identifier': 'so101_msgs', 'progress': 'build'}
+[1.421233] (so101_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/marsuser/so101_ws/build/so101_msgs', '--', '-j32', '-l32'], 'cwd': '/home/marsuser/so101_ws/build/so101_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'marsuser'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/opt/openrobots/lib:'), ('HOME', '/home/marsuser'), ('OLDPWD', '/home/marsuser/so101_ws/src/so101_msgs'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2768'), ('SYSTEMD_EXEC_PID', '3260'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '8056'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'marsuser'), ('JOURNAL_STREAM', '8:31154'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/openrobots/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'marsuser'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda/bin:/opt/openrobots/bin:/home/marsuser/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/marsnew:@/tmp/.ICE-unix/3086,unix/marsnew:/tmp/.ICE-unix/3086'), ('INVOCATION_ID', '3e6f269566e14822a468b397cf86b7a8'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('TERMINATOR_UUID', 'urn:uuid:a05ea11a-b9ec-44cb-993c-7ef4875380d9'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', ':/home/marsuser/urdf_ws/install/rovermk2_description/share:/home/marsuser/urdf_ws/install/manipmk1_description/share'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/marsuser/so101_ws/build/so101_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/marsuser/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/opt/openrobots/lib/python3.10/site-packages:'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/openrobots::/opt/ros/humble')]), 'shell': False}
+[1.453718] (so101_msgs) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.460869] (so101_msgs) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating Rust code for ROS interfaces\x1b[0m\n'}
+[1.461487] (so101_msgs) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.468382] (so101_msgs) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_copy_so101_msgs\n'}
+[1.500606] (-) TimerEvent: {}
+[1.600818] (-) TimerEvent: {}
+[1.634763] (so101_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[1.635069] (so101_msgs) StdoutLine: {'line': b'creating so101_msgs.egg-info\n'}
+[1.635170] (so101_msgs) StdoutLine: {'line': b'writing so101_msgs.egg-info/PKG-INFO\n'}
+[1.635284] (so101_msgs) StdoutLine: {'line': b'writing dependency_links to so101_msgs.egg-info/dependency_links.txt\n'}
+[1.635391] (so101_msgs) StdoutLine: {'line': b'writing top-level names to so101_msgs.egg-info/top_level.txt\n'}
+[1.635549] (so101_msgs) StdoutLine: {'line': b"writing manifest file 'so101_msgs.egg-info/SOURCES.txt'\n"}
+[1.636977] (so101_msgs) StdoutLine: {'line': b"reading manifest file 'so101_msgs.egg-info/SOURCES.txt'\n"}
+[1.637298] (so101_msgs) StdoutLine: {'line': b"writing manifest file 'so101_msgs.egg-info/SOURCES.txt'\n"}
+[1.654671] (so101_msgs) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_build_so101_msgs_egg\n'}
+[1.700899] (-) TimerEvent: {}
+[1.706689] (so101_msgs) StdoutLine: {'line': b'[  5%] Built target so101_msgs__rs\n'}
+[1.786601] (so101_msgs) StdoutLine: {'line': b'[  5%] Built target so101_msgs__cpp\n'}
+[1.795272] (so101_msgs) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.795597] (so101_msgs) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.796110] (so101_msgs) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[1.800380] (so101_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/so101_msgs__rosidl_generator_c.dir/rosidl_generator_c/so101_msgs/msg/detail/joint_velocity_command__functions.c.o\x1b[0m\n'}
+[1.800489] (so101_msgs) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/so101_msgs__rosidl_generator_c.dir/rosidl_generator_c/so101_msgs/msg/detail/cartesian_command__functions.c.o\x1b[0m\n'}
+[1.800955] (-) TimerEvent: {}
+[1.801100] (so101_msgs) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object CMakeFiles/so101_msgs__rosidl_generator_c.dir/rosidl_generator_c/so101_msgs/msg/detail/joint_command__functions.c.o\x1b[0m\n'}
+[1.801210] (so101_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/so101_msgs__rosidl_generator_c.dir/rosidl_generator_c/so101_msgs/msg/detail/controller_status__functions.c.o\x1b[0m\n'}
+[1.843254] (so101_msgs) StdoutLine: {'line': b'[ 19%] \x1b[32m\x1b[1mLinking C shared library libso101_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[1.874033] (so101_msgs) StdoutLine: {'line': b'[ 19%] Built target so101_msgs__rosidl_generator_c\n'}
+[1.882766] (so101_msgs) StdoutLine: {'line': b'[ 21%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.882918] (so101_msgs) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[1.883157] (so101_msgs) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.901032] (-) TimerEvent: {}
+[2.001246] (-) TimerEvent: {}
+[2.060373] (so101_msgs) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/so101_msgs/msg/cartesian_command__type_support.cpp.o\x1b[0m\n'}
+[2.060744] (so101_msgs) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/so101_msgs/msg/joint_command__type_support.cpp.o\x1b[0m\n'}
+[2.061705] (so101_msgs) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/so101_msgs/msg/joint_velocity_command__type_support.cpp.o\x1b[0m\n'}
+[2.061793] (so101_msgs) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/so101_msgs/msg/controller_status__type_support.cpp.o\x1b[0m\n'}
+[2.080826] (so101_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/so101_msgs/msg/detail/joint_velocity_command__type_support.cpp.o\x1b[0m\n'}
+[2.081077] (so101_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/so101_msgs/msg/detail/joint_command__type_support.cpp.o\x1b[0m\n'}
+[2.081206] (so101_msgs) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/so101_msgs/msg/detail/controller_status__type_support.cpp.o\x1b[0m\n'}
+[2.083213] (so101_msgs) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/so101_msgs/msg/detail/cartesian_command__type_support.cpp.o\x1b[0m\n'}
+[2.101400] (-) TimerEvent: {}
+[2.123510] (so101_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/so101_msgs/msg/detail/dds_fastrtps/joint_command__type_support.cpp.o\x1b[0m\n'}
+[2.123904] (so101_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/so101_msgs/msg/detail/dds_fastrtps/joint_velocity_command__type_support.cpp.o\x1b[0m\n'}
+[2.124088] (so101_msgs) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/so101_msgs/msg/detail/dds_fastrtps/cartesian_command__type_support.cpp.o\x1b[0m\n'}
+[2.127552] (so101_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/so101_msgs/msg/detail/dds_fastrtps/controller_status__type_support.cpp.o\x1b[0m\n'}
+[2.166174] (so101_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/so101_msgs/msg/joint_command__type_support.cpp.o\x1b[0m\n'}
+[2.166627] (so101_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/so101_msgs/msg/joint_velocity_command__type_support.cpp.o\x1b[0m\n'}
+[2.166785] (so101_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/so101_msgs/msg/cartesian_command__type_support.cpp.o\x1b[0m\n'}
+[2.167918] (so101_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/so101_msgs/msg/controller_status__type_support.cpp.o\x1b[0m\n'}
+[2.201605] (-) TimerEvent: {}
+[2.209618] (so101_msgs) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking CXX shared library libso101_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[2.220488] (so101_msgs) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding C object CMakeFiles/so101_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/so101_msgs/msg/detail/controller_status__type_support.c.o\x1b[0m\n'}
+[2.220853] (so101_msgs) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding C object CMakeFiles/so101_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/so101_msgs/msg/detail/joint_velocity_command__type_support.c.o\x1b[0m\n'}
+[2.220992] (so101_msgs) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding C object CMakeFiles/so101_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/so101_msgs/msg/detail/joint_command__type_support.c.o\x1b[0m\n'}
+[2.221426] (so101_msgs) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding C object CMakeFiles/so101_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/so101_msgs/msg/detail/cartesian_command__type_support.c.o\x1b[0m\n'}
+[2.236854] (so101_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/so101_msgs/msg/detail/joint_command__type_support_c.cpp.o\x1b[0m\n'}
+[2.237479] (so101_msgs) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/so101_msgs/msg/detail/cartesian_command__type_support_c.cpp.o\x1b[0m\n'}
+[2.237646] (so101_msgs) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/so101_msgs/msg/detail/joint_velocity_command__type_support_c.cpp.o\x1b[0m\n'}
+[2.237776] (so101_msgs) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/so101_msgs/msg/detail/controller_status__type_support_c.cpp.o\x1b[0m\n'}
+[2.271624] (so101_msgs) StdoutLine: {'line': b'[ 69%] Built target so101_msgs__rosidl_typesupport_c\n'}
+[2.274055] (so101_msgs) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking C shared library libso101_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[2.301725] (-) TimerEvent: {}
+[2.310960] (so101_msgs) StdoutLine: {'line': b'[ 71%] Built target so101_msgs__rosidl_typesupport_introspection_c\n'}
+[2.316418] (so101_msgs) StdoutLine: {'line': b'[ 73%] \x1b[32m\x1b[1mLinking CXX shared library libso101_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[2.355633] (so101_msgs) StdoutLine: {'line': b'[ 73%] Built target so101_msgs__rosidl_typesupport_cpp\n'}
+[2.401853] (-) TimerEvent: {}
+[2.460857] (so101_msgs) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX shared library libso101_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[2.501948] (-) TimerEvent: {}
+[2.518373] (so101_msgs) StdoutLine: {'line': b'[ 75%] Built target so101_msgs__rosidl_typesupport_introspection_cpp\n'}
+[2.523226] (so101_msgs) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX shared library libso101_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[2.523684] (so101_msgs) StdoutLine: {'line': b'[ 78%] \x1b[32m\x1b[1mLinking CXX shared library libso101_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[2.578206] (so101_msgs) StdoutLine: {'line': b'[ 78%] Built target so101_msgs__rosidl_typesupport_fastrtps_c\n'}
+[2.579894] (so101_msgs) StdoutLine: {'line': b'[ 78%] Built target so101_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[2.595763] (so101_msgs) StdoutLine: {'line': b'[ 78%] Built target so101_msgs\n'}
+[2.602005] (-) TimerEvent: {}
+[2.611709] (so101_msgs) StdoutLine: {'line': b'[ 80%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[2.702080] (-) TimerEvent: {}
+[2.802277] (-) TimerEvent: {}
+[2.902432] (-) TimerEvent: {}
+[3.002918] (-) TimerEvent: {}
+[3.101376] (so101_msgs) StdoutLine: {'line': b'[ 80%] Built target so101_msgs__py\n'}
+[3.102981] (-) TimerEvent: {}
+[3.117140] (so101_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/so101_msgs__rosidl_generator_py.dir/rosidl_generator_py/so101_msgs/msg/_cartesian_command_s.c.o\x1b[0m\n'}
+[3.117380] (so101_msgs) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/so101_msgs__rosidl_generator_py.dir/rosidl_generator_py/so101_msgs/msg/_joint_velocity_command_s.c.o\x1b[0m\n'}
+[3.117440] (so101_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/so101_msgs__rosidl_generator_py.dir/rosidl_generator_py/so101_msgs/msg/_joint_command_s.c.o\x1b[0m\n'}
+[3.117872] (so101_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/so101_msgs__rosidl_generator_py.dir/rosidl_generator_py/so101_msgs/msg/_controller_status_s.c.o\x1b[0m\n'}
+[3.203091] (-) TimerEvent: {}
+[3.207035] (so101_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/so101_msgs/libso101_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[3.240671] (so101_msgs) StdoutLine: {'line': b'[ 89%] Built target so101_msgs__rosidl_generator_py\n'}
+[3.257034] (so101_msgs) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/so101_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/so101_msgs/_so101_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[3.257788] (so101_msgs) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/so101_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/so101_msgs/_so101_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[3.258636] (so101_msgs) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/so101_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/so101_msgs/_so101_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[3.303149] (-) TimerEvent: {}
+[3.333647] (so101_msgs) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/so101_msgs/so101_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[3.333829] (so101_msgs) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/so101_msgs/so101_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[3.334070] (so101_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/so101_msgs/so101_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[3.365526] (so101_msgs) StdoutLine: {'line': b'[100%] Built target so101_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[3.365667] (so101_msgs) StdoutLine: {'line': b'[100%] Built target so101_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[3.366175] (so101_msgs) StdoutLine: {'line': b'[100%] Built target so101_msgs__rosidl_typesupport_c__pyext\n'}
+[3.376050] (so101_msgs) CommandEnded: {'returncode': 0}
+[3.376652] (so101_msgs) JobProgress: {'identifier': 'so101_msgs', 'progress': 'install'}
+[3.376976] (so101_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/marsuser/so101_ws/build/so101_msgs'], 'cwd': '/home/marsuser/so101_ws/build/so101_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'marsuser'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/opt/openrobots/lib:'), ('HOME', '/home/marsuser'), ('OLDPWD', '/home/marsuser/so101_ws/src/so101_msgs'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2768'), ('SYSTEMD_EXEC_PID', '3260'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '8056'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'marsuser'), ('JOURNAL_STREAM', '8:31154'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/openrobots/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'marsuser'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda/bin:/opt/openrobots/bin:/home/marsuser/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/marsnew:@/tmp/.ICE-unix/3086,unix/marsnew:/tmp/.ICE-unix/3086'), ('INVOCATION_ID', '3e6f269566e14822a468b397cf86b7a8'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('TERMINATOR_UUID', 'urn:uuid:a05ea11a-b9ec-44cb-993c-7ef4875380d9'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', ':/home/marsuser/urdf_ws/install/rovermk2_description/share:/home/marsuser/urdf_ws/install/manipmk1_description/share'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/marsuser/so101_ws/build/so101_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/marsuser/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/opt/openrobots/lib/python3.10/site-packages:'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/openrobots::/opt/ros/humble')]), 'shell': False}
+[3.383116] (so101_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.383285] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/ament_index/resource_index/rosidl_interfaces/so101_msgs\n'}
+[3.383420] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs\n'}
+[3.383509] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg\n'}
+[3.383575] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail\n'}
+[3.383648] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__struct.h\n'}
+[3.383729] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__type_support.h\n'}
+[3.383819] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__functions.h\n'}
+[3.383917] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__struct.h\n'}
+[3.384006] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__struct.h\n'}
+[3.384096] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__functions.h\n'}
+[3.384210] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__type_support.h\n'}
+[3.384300] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__functions.c\n'}
+[3.384398] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__functions.c\n'}
+[3.384496] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__functions.h\n'}
+[3.384599] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__functions.c\n'}
+[3.384695] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__struct.h\n'}
+[3.384804] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__type_support.h\n'}
+[3.384894] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__type_support.h\n'}
+[3.384990] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__functions.h\n'}
+[3.385086] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__functions.c\n'}
+[3.385192] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/joint_command.h\n'}
+[3.385282] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/cartesian_command.h\n'}
+[3.385371] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/joint_velocity_command.h\n'}
+[3.385461] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[3.385548] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/controller_status.h\n'}
+[3.385710] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/environment/library_path.sh\n'}
+[3.385822] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/environment/library_path.dsv\n'}
+[3.385979] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_generator_c.so\n'}
+[3.386260] (so101_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_generator_c.so" to ""\n'}
+[3.386348] (so101_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs\n'}
+[3.386392] (so101_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg\n'}
+[3.386430] (so101_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail\n'}
+[3.386497] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__rosidl_typesupport_fastrtps_c.h\n'}
+[3.386535] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__rosidl_typesupport_fastrtps_c.h\n'}
+[3.386590] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__rosidl_typesupport_fastrtps_c.h\n'}
+[3.386672] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__rosidl_typesupport_fastrtps_c.h\n'}
+[3.386761] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[3.386878] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[3.387161] (so101_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[3.387241] (so101_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs\n'}
+[3.387282] (so101_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg\n'}
+[3.387320] (so101_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail\n'}
+[3.387399] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__rosidl_typesupport_introspection_c.h\n'}
+[3.387434] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__type_support.c\n'}
+[3.387490] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__type_support.c\n'}
+[3.387579] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__rosidl_typesupport_introspection_c.h\n'}
+[3.387670] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__type_support.c\n'}
+[3.387768] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__rosidl_typesupport_introspection_c.h\n'}
+[3.387865] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__rosidl_typesupport_introspection_c.h\n'}
+[3.387959] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__type_support.c\n'}
+[3.388053] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[3.388176] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_introspection_c.so\n'}
+[3.388431] (so101_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[3.388495] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_c.so\n'}
+[3.388707] (so101_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_c.so" to ""\n'}
+[3.388777] (so101_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs\n'}
+[3.388820] (so101_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg\n'}
+[3.388885] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/joint_velocity_command.hpp\n'}
+[3.388924] (so101_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail\n'}
+[3.388984] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__type_support.hpp\n'}
+[3.389047] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__struct.hpp\n'}
+[3.389117] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__type_support.hpp\n'}
+[3.389222] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__type_support.hpp\n'}
+[3.389315] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__builder.hpp\n'}
+[3.389408] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__builder.hpp\n'}
+[3.389503] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__struct.hpp\n'}
+[3.389603] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__struct.hpp\n'}
+[3.389703] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__type_support.hpp\n'}
+[3.389799] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__traits.hpp\n'}
+[3.389897] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__traits.hpp\n'}
+[3.389992] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__builder.hpp\n'}
+[3.390090] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__struct.hpp\n'}
+[3.390200] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__builder.hpp\n'}
+[3.390293] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__traits.hpp\n'}
+[3.390390] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__traits.hpp\n'}
+[3.390488] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/joint_command.hpp\n'}
+[3.390577] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/controller_status.hpp\n'}
+[3.390671] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/cartesian_command.hpp\n'}
+[3.390761] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[3.390865] (so101_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs\n'}
+[3.390935] (so101_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg\n'}
+[3.390978] (so101_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail\n'}
+[3.391038] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.391102] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.391173] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.391250] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/dds_fastrtps\n'}
+[3.391322] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.391419] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[3.391535] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[3.391859] (so101_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[3.391928] (so101_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs\n'}
+[3.391971] (so101_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg\n'}
+[3.392037] (so101_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail\n'}
+[3.392075] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__type_support.cpp\n'}
+[3.392141] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__type_support.cpp\n'}
+[3.392211] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__type_support.cpp\n'}
+[3.392305] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.392401] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.392497] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__type_support.cpp\n'}
+[3.392596] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.392696] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.392815] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[3.393130] (so101_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[3.393201] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_cpp.so\n'}
+[3.393405] (so101_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[3.393470] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/environment/pythonpath.sh\n'}
+[3.393548] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/environment/pythonpath.dsv\n'}
+[3.393649] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs-0.0.1-py3.10.egg-info\n'}
+[3.393772] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs-0.0.1-py3.10.egg-info/SOURCES.txt\n'}
+[3.393863] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs-0.0.1-py3.10.egg-info/PKG-INFO\n'}
+[3.393957] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs-0.0.1-py3.10.egg-info/dependency_links.txt\n'}
+[3.394046] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs-0.0.1-py3.10.egg-info/top_level.txt\n'}
+[3.394159] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs\n'}
+[3.394228] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/_so101_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[3.394336] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/_so101_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[3.394439] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/so101_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[3.394547] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/libso101_msgs__rosidl_generator_py.so\n'}
+[3.394673] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg\n'}
+[3.394740] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_joint_velocity_command_s.c\n'}
+[3.394838] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_controller_status.py\n'}
+[3.394940] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_joint_command.py\n'}
+[3.395045] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_cartesian_command.py\n'}
+[3.395151] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/__init__.py\n'}
+[3.395244] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_controller_status_s.c\n'}
+[3.395342] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_joint_command_s.c\n'}
+[3.395437] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_joint_velocity_command.py\n'}
+[3.395533] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_cartesian_command_s.c\n'}
+[3.395628] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/__init__.py\n'}
+[3.395710] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/so101_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[3.395819] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/so101_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[3.395931] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/_so101_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[3.403204] (-) TimerEvent: {}
+[3.421663] (so101_msgs) StdoutLine: {'line': b"Listing '/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs'...\n"}
+[3.421749] (so101_msgs) StdoutLine: {'line': b"Compiling '/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/__init__.py'...\n"}
+[3.421801] (so101_msgs) StdoutLine: {'line': b"Listing '/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg'...\n"}
+[3.421846] (so101_msgs) StdoutLine: {'line': b"Compiling '/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/__init__.py'...\n"}
+[3.421888] (so101_msgs) StdoutLine: {'line': b"Compiling '/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_cartesian_command.py'...\n"}
+[3.421931] (so101_msgs) StdoutLine: {'line': b"Compiling '/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_controller_status.py'...\n"}
+[3.421982] (so101_msgs) StdoutLine: {'line': b"Compiling '/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_joint_command.py'...\n"}
+[3.422028] (so101_msgs) StdoutLine: {'line': b"Compiling '/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_joint_velocity_command.py'...\n"}
+[3.424538] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/so101_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[3.424878] (so101_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/so101_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[3.425058] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/so101_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[3.425329] (so101_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/so101_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[3.425477] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/so101_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[3.425721] (so101_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/so101_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[3.425819] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_generator_py.so\n'}
+[3.426025] (so101_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_generator_py.so" to ""\n'}
+[3.426108] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/ament_index/resource_index/rust_packages/so101_msgs\n'}
+[3.426221] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/rust\n'}
+[3.426307] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/rust/Cargo.toml\n'}
+[3.426393] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/rust/build.rs\n'}
+[3.426480] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/rust/src\n'}
+[3.426567] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/rust/src/msg\n'}
+[3.426655] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/rust/src/msg/rmw.rs\n'}
+[3.426745] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/rust/src/msg.rs\n'}
+[3.426841] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/rust/src/lib.rs\n'}
+[3.426945] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/msg/CartesianCommand.idl\n'}
+[3.427062] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/msg/JointVelocityCommand.idl\n'}
+[3.427192] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/msg/JointCommand.idl\n'}
+[3.427302] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/msg/ControllerStatus.idl\n'}
+[3.427411] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/msg/CartesianCommand.msg\n'}
+[3.427522] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/msg/JointVelocityCommand.msg\n'}
+[3.427629] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/msg/JointCommand.msg\n'}
+[3.427734] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/msg/ControllerStatus.msg\n'}
+[3.427878] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/ament_index/resource_index/package_run_dependencies/so101_msgs\n'}
+[3.428027] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/ament_index/resource_index/parent_prefix_path/so101_msgs\n'}
+[3.428146] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/environment/ament_prefix_path.sh\n'}
+[3.428261] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/environment/ament_prefix_path.dsv\n'}
+[3.428378] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/environment/path.sh\n'}
+[3.428488] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/environment/path.dsv\n'}
+[3.428597] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/local_setup.bash\n'}
+[3.428706] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/local_setup.sh\n'}
+[3.428818] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/local_setup.zsh\n'}
+[3.428925] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/local_setup.dsv\n'}
+[3.429029] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/package.dsv\n'}
+[3.429179] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/ament_index/resource_index/packages/so101_msgs\n'}
+[3.429334] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/export_so101_msgs__rosidl_generator_cExport.cmake\n'}
+[3.429450] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/export_so101_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[3.429572] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/export_so101_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[3.429694] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/export_so101_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[3.429817] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/so101_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[3.429935] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/so101_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[3.430057] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/so101_msgs__rosidl_typesupport_cExport.cmake\n'}
+[3.430188] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/so101_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[3.430310] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/export_so101_msgs__rosidl_generator_cppExport.cmake\n'}
+[3.430430] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/export_so101_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[3.430547] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/export_so101_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[3.430668] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/so101_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[3.430785] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/so101_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[3.430913] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/so101_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[3.431041] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/so101_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[3.431167] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/export_so101_msgs__rosidl_generator_pyExport.cmake\n'}
+[3.431293] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/export_so101_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[3.431403] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[3.431514] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[3.431632] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[3.431739] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[3.431856] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[3.431965] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[3.432076] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[3.432196] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/so101_msgsConfig.cmake\n'}
+[3.432290] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/so101_msgsConfig-version.cmake\n'}
+[3.432399] (so101_msgs) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/package.xml\n'}
+[3.434540] (so101_msgs) CommandEnded: {'returncode': 0}
+[3.446499] (so101_msgs) JobEnded: {'identifier': 'so101_msgs', 'rc': 0}
+[3.503264] (-) TimerEvent: {}
+[3.603413] (-) TimerEvent: {}
+[3.703570] (-) TimerEvent: {}
+[3.803724] (-) TimerEvent: {}
+[3.903879] (-) TimerEvent: {}
+[4.004033] (-) TimerEvent: {}
+[4.104187] (-) TimerEvent: {}
+[4.204341] (-) TimerEvent: {}
+[4.304520] (-) TimerEvent: {}
+[4.404727] (-) TimerEvent: {}
+[4.504926] (-) TimerEvent: {}
+[4.605162] (-) TimerEvent: {}
+[4.705406] (-) TimerEvent: {}
+[4.806040] (-) TimerEvent: {}
+[4.906260] (-) TimerEvent: {}
+[5.006422] (-) TimerEvent: {}
+[5.106611] (-) TimerEvent: {}
+[5.206799] (-) TimerEvent: {}
+[5.306989] (-) TimerEvent: {}
+[5.407166] (-) TimerEvent: {}
+[5.507329] (-) TimerEvent: {}
+[5.607478] (-) TimerEvent: {}
+[5.707626] (-) TimerEvent: {}
+[5.807788] (-) TimerEvent: {}
+[5.907978] (-) TimerEvent: {}
+[6.008171] (-) TimerEvent: {}
+[6.108371] (-) TimerEvent: {}
+[6.208563] (-) TimerEvent: {}
+[6.309093] (-) TimerEvent: {}
+[6.409323] (-) TimerEvent: {}
+[6.509514] (-) TimerEvent: {}
+[6.609717] (-) TimerEvent: {}
+[6.709959] (-) TimerEvent: {}
+[6.810163] (-) TimerEvent: {}
+[6.910711] (-) TimerEvent: {}
+[7.010899] (-) TimerEvent: {}
+[7.111084] (-) TimerEvent: {}
+[7.211277] (-) TimerEvent: {}
+[7.311839] (-) TimerEvent: {}
+[7.412023] (-) TimerEvent: {}
+[7.512185] (-) TimerEvent: {}
+[7.612373] (-) TimerEvent: {}
+[7.712563] (-) TimerEvent: {}
+[7.812752] (-) TimerEvent: {}
+[7.912948] (-) TimerEvent: {}
+[8.013160] (-) TimerEvent: {}
+[8.113368] (-) TimerEvent: {}
+[8.213561] (-) TimerEvent: {}
+[8.313758] (-) TimerEvent: {}
+[8.413972] (-) TimerEvent: {}
+[8.514160] (-) TimerEvent: {}
+[8.614411] (-) TimerEvent: {}
+[8.714730] (-) TimerEvent: {}
+[8.815056] (-) TimerEvent: {}
+[8.915350] (-) TimerEvent: {}
+[9.015604] (-) TimerEvent: {}
+[9.115797] (-) TimerEvent: {}
+[9.215984] (-) TimerEvent: {}
+[9.316189] (-) TimerEvent: {}
+[9.416470] (-) TimerEvent: {}
+[9.516671] (-) TimerEvent: {}
+[9.616877] (-) TimerEvent: {}
+[9.717089] (-) TimerEvent: {}
+[9.817331] (-) TimerEvent: {}
+[9.917569] (-) TimerEvent: {}
+[10.017769] (-) TimerEvent: {}
+[10.118017] (-) TimerEvent: {}
+[10.218340] (-) TimerEvent: {}
+[10.318582] (-) TimerEvent: {}
+[10.418800] (-) TimerEvent: {}
+[10.519057] (-) TimerEvent: {}
+[10.619342] (-) TimerEvent: {}
+[10.719582] (-) TimerEvent: {}
+[10.819841] (-) TimerEvent: {}
+[10.920070] (-) TimerEvent: {}
+[11.020324] (-) TimerEvent: {}
+[11.120561] (-) TimerEvent: {}
+[11.220779] (-) TimerEvent: {}
+[11.320991] (-) TimerEvent: {}
+[11.421226] (-) TimerEvent: {}
+[11.521446] (-) TimerEvent: {}
+[11.621694] (-) TimerEvent: {}
+[11.721936] (-) TimerEvent: {}
+[11.822181] (-) TimerEvent: {}
+[11.922416] (-) TimerEvent: {}
+[12.022653] (-) TimerEvent: {}
+[12.122862] (-) TimerEvent: {}
+[12.223092] (-) TimerEvent: {}
+[12.323327] (-) TimerEvent: {}
+[12.423561] (-) TimerEvent: {}
+[12.523770] (-) TimerEvent: {}
+[12.623992] (-) TimerEvent: {}
+[12.724221] (-) TimerEvent: {}
+[12.824458] (-) TimerEvent: {}
+[12.924660] (-) TimerEvent: {}
+[13.024941] (-) TimerEvent: {}
+[13.125187] (-) TimerEvent: {}
+[13.225450] (-) TimerEvent: {}
+[13.298368] (so101_kinematics) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX shared library libso101_kinematics.so\x1b[0m\n'}
+[13.325522] (-) TimerEvent: {}
+[13.425724] (-) TimerEvent: {}
+[13.525902] (-) TimerEvent: {}
+[13.541037] (so101_kinematics) StdoutLine: {'line': b'[ 50%] Built target so101_kinematics\n'}
+[13.555838] (so101_kinematics) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/test_kinematics_node.dir/src/test_kinematics_node.cpp.o\x1b[0m\n'}
+[13.626015] (-) TimerEvent: {}
+[13.726317] (-) TimerEvent: {}
+[13.826574] (-) TimerEvent: {}
+[13.926820] (-) TimerEvent: {}
+[14.027024] (-) TimerEvent: {}
+[14.127239] (-) TimerEvent: {}
+[14.227436] (-) TimerEvent: {}
+[14.327636] (-) TimerEvent: {}
+[14.427866] (-) TimerEvent: {}
+[14.528147] (-) TimerEvent: {}
+[14.628382] (-) TimerEvent: {}
+[14.728634] (-) TimerEvent: {}
+[14.829065] (-) TimerEvent: {}
+[14.929307] (-) TimerEvent: {}
+[15.029526] (-) TimerEvent: {}
+[15.129736] (-) TimerEvent: {}
+[15.229955] (-) TimerEvent: {}
+[15.330179] (-) TimerEvent: {}
+[15.430355] (-) TimerEvent: {}
+[15.530552] (-) TimerEvent: {}
+[15.630799] (-) TimerEvent: {}
+[15.731075] (-) TimerEvent: {}
+[15.831319] (-) TimerEvent: {}
+[15.931543] (-) TimerEvent: {}
+[16.031752] (-) TimerEvent: {}
+[16.131981] (-) TimerEvent: {}
+[16.232192] (-) TimerEvent: {}
+[16.332400] (-) TimerEvent: {}
+[16.432630] (-) TimerEvent: {}
+[16.532843] (-) TimerEvent: {}
+[16.633049] (-) TimerEvent: {}
+[16.733266] (-) TimerEvent: {}
+[16.833551] (-) TimerEvent: {}
+[16.933766] (-) TimerEvent: {}
+[17.033975] (-) TimerEvent: {}
+[17.134159] (-) TimerEvent: {}
+[17.234353] (-) TimerEvent: {}
+[17.334547] (-) TimerEvent: {}
+[17.434760] (-) TimerEvent: {}
+[17.535184] (-) TimerEvent: {}
+[17.635354] (-) TimerEvent: {}
+[17.735524] (-) TimerEvent: {}
+[17.835690] (-) TimerEvent: {}
+[17.935884] (-) TimerEvent: {}
+[18.036096] (-) TimerEvent: {}
+[18.136316] (-) TimerEvent: {}
+[18.236498] (-) TimerEvent: {}
+[18.336695] (-) TimerEvent: {}
+[18.436918] (-) TimerEvent: {}
+[18.537160] (-) TimerEvent: {}
+[18.637374] (-) TimerEvent: {}
+[18.737606] (-) TimerEvent: {}
+[18.837860] (-) TimerEvent: {}
+[18.938076] (-) TimerEvent: {}
+[18.961025] (so101_kinematics) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable test_kinematics_node\x1b[0m\n'}
+[19.038190] (-) TimerEvent: {}
+[19.092532] (so101_kinematics) StdoutLine: {'line': b'[100%] Built target test_kinematics_node\n'}
+[19.102213] (so101_kinematics) CommandEnded: {'returncode': 0}
+[19.102859] (so101_kinematics) JobProgress: {'identifier': 'so101_kinematics', 'progress': 'install'}
+[19.103236] (so101_kinematics) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/marsuser/so101_ws/build/so101_kinematics'], 'cwd': '/home/marsuser/so101_ws/build/so101_kinematics', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'marsuser'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/opt/openrobots/lib:'), ('HOME', '/home/marsuser'), ('OLDPWD', '/home/marsuser/so101_ws/src/so101_msgs'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2768'), ('SYSTEMD_EXEC_PID', '3260'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '8056'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'marsuser'), ('JOURNAL_STREAM', '8:31154'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/openrobots/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'marsuser'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda/bin:/opt/openrobots/bin:/home/marsuser/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/marsnew:@/tmp/.ICE-unix/3086,unix/marsnew:/tmp/.ICE-unix/3086'), ('INVOCATION_ID', '3e6f269566e14822a468b397cf86b7a8'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('TERMINATOR_UUID', 'urn:uuid:a05ea11a-b9ec-44cb-993c-7ef4875380d9'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', ':/home/marsuser/urdf_ws/install/rovermk2_description/share:/home/marsuser/urdf_ws/install/manipmk1_description/share'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/marsuser/so101_ws/build/so101_kinematics'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/marsuser/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/opt/openrobots/lib/python3.10/site-packages:'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/openrobots::/opt/ros/humble')]), 'shell': False}
+[19.109432] (so101_kinematics) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[19.109557] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/include\n'}
+[19.109626] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/include/so101_kinematics\n'}
+[19.109717] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/include/so101_kinematics/so101_kinematics.hpp\n'}
+[19.109807] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/lib/libso101_kinematics.so\n'}
+[19.116112] (so101_kinematics) StdoutLine: {'line': b'-- Set runtime path of "/home/marsuser/so101_ws/install/so101_kinematics/lib/libso101_kinematics.so" to ""\n'}
+[19.116210] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/lib/so101_kinematics/test_kinematics_node\n'}
+[19.116998] (so101_kinematics) StdoutLine: {'line': b'-- Set runtime path of "/home/marsuser/so101_ws/install/so101_kinematics/lib/so101_kinematics/test_kinematics_node" to ""\n'}
+[19.117109] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/environment/library_path.sh\n'}
+[19.117230] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/environment/library_path.dsv\n'}
+[19.117416] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/ament_index/resource_index/package_run_dependencies/so101_kinematics\n'}
+[19.117552] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/ament_index/resource_index/parent_prefix_path/so101_kinematics\n'}
+[19.117664] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/environment/ament_prefix_path.sh\n'}
+[19.117778] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/environment/ament_prefix_path.dsv\n'}
+[19.117877] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/environment/path.sh\n'}
+[19.117987] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/environment/path.dsv\n'}
+[19.118093] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/local_setup.bash\n'}
+[19.118227] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/local_setup.sh\n'}
+[19.118325] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/local_setup.zsh\n'}
+[19.118431] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/local_setup.dsv\n'}
+[19.118534] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/package.dsv\n'}
+[19.118676] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/ament_index/resource_index/packages/so101_kinematics\n'}
+[19.118826] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake/export_so101_kinematicsExport.cmake\n'}
+[19.118936] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake/export_so101_kinematicsExport-noconfig.cmake\n'}
+[19.119042] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[19.119156] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[19.119270] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[19.119378] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake/so101_kinematicsConfig.cmake\n'}
+[19.119469] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake/so101_kinematicsConfig-version.cmake\n'}
+[19.119571] (so101_kinematics) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/package.xml\n'}
+[19.120882] (so101_kinematics) CommandEnded: {'returncode': 0}
+[19.135354] (so101_kinematics) JobEnded: {'identifier': 'so101_kinematics', 'rc': 0}
+[19.136185] (so101_bringup) JobStarted: {'identifier': 'so101_bringup'}
+[19.138241] (-) TimerEvent: {}
+[19.145000] (so101_bringup) JobProgress: {'identifier': 'so101_bringup', 'progress': 'cmake'}
+[19.145347] (so101_bringup) Command: {'cmd': ['/usr/bin/cmake', '/home/marsuser/so101_ws/src/so101_bringup', '-DCMAKE_INSTALL_PREFIX=/home/marsuser/so101_ws/install/so101_bringup'], 'cwd': '/home/marsuser/so101_ws/build/so101_bringup', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'marsuser'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/marsuser/so101_ws/install/so101_msgs/lib:/home/marsuser/so101_ws/install/so101_kinematics/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/opt/openrobots/lib'), ('HOME', '/home/marsuser'), ('OLDPWD', '/home/marsuser/so101_ws/src/so101_msgs'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2768'), ('SYSTEMD_EXEC_PID', '3260'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '8056'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'marsuser'), ('JOURNAL_STREAM', '8:31154'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/openrobots/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'marsuser'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda/bin:/opt/openrobots/bin:/home/marsuser/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/marsnew:@/tmp/.ICE-unix/3086,unix/marsnew:/tmp/.ICE-unix/3086'), ('INVOCATION_ID', '3e6f269566e14822a468b397cf86b7a8'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/marsuser/so101_ws/install/so101_msgs:/home/marsuser/so101_ws/install/so101_kinematics:/home/marsuser/so101_ws/install/so101_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('TERMINATOR_UUID', 'urn:uuid:a05ea11a-b9ec-44cb-993c-7ef4875380d9'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', ':/home/marsuser/urdf_ws/install/rovermk2_description/share:/home/marsuser/urdf_ws/install/manipmk1_description/share'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/marsuser/so101_ws/build/so101_bringup'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/marsuser/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/opt/openrobots/lib/python3.10/site-packages:'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/marsuser/so101_ws/install/so101_msgs:/home/marsuser/so101_ws/install/so101_kinematics:/home/marsuser/so101_ws/install/so101_description:/opt/openrobots:/opt/ros/humble')]), 'shell': False}
+[19.185104] (so101_bringup) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[19.223098] (so101_bringup) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[19.229710] (so101_bringup) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[19.238319] (-) TimerEvent: {}
+[19.284693] (so101_bringup) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[19.291985] (so101_bringup) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[19.292268] (so101_bringup) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[19.292674] (so101_bringup) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[19.295724] (so101_bringup) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[19.338418] (-) TimerEvent: {}
+[19.358072] (so101_bringup) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[19.365633] (so101_bringup) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[19.365928] (so101_bringup) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[19.366417] (so101_bringup) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[19.370575] (so101_bringup) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[19.438498] (-) TimerEvent: {}
+[19.479086] (so101_bringup) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[19.538583] (-) TimerEvent: {}
+[19.562303] (so101_bringup) StdoutLine: {'line': b'-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[19.601503] (so101_bringup) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[19.606426] (so101_bringup) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[19.613585] (so101_bringup) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[19.623004] (so101_bringup) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[19.635842] (so101_bringup) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[19.638667] (-) TimerEvent: {}
+[19.679060] (so101_bringup) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[19.682530] (so101_bringup) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[19.738739] (-) TimerEvent: {}
+[19.771510] (so101_bringup) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[19.794675] (so101_bringup) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[19.829889] (so101_bringup) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[19.838805] (-) TimerEvent: {}
+[19.840213] (so101_bringup) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[19.895426] (so101_bringup) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[19.895749] (so101_bringup) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[19.938882] (-) TimerEvent: {}
+[19.949762] (so101_bringup) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[19.950559] (so101_bringup) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[19.994694] (so101_bringup) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[20.017503] (so101_bringup) StdoutLine: {'line': b'-- Found so101_msgs: 0.0.1 (/home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake)\n'}
+[20.026935] (so101_bringup) StdoutLine: {'line': b'-- Found so101_kinematics: 0.0.1 (/home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake)\n'}
+[20.038970] (-) TimerEvent: {}
+[20.074112] (so101_bringup) StdoutLine: {'line': b'-- Found Boost: /usr/include (found version "1.74.0") found components: filesystem serialization \n'}
+[20.074535] (so101_bringup) StdoutLine: {'line': b'-- coal FOUND. coal at /opt/openrobots/lib/libcoal.so\n'}
+[20.078109] (so101_bringup) StdoutLine: {'line': b'-- Found Boost: /usr/include (found version "1.74.0") found components: serialization filesystem \n'}
+[20.139050] (-) TimerEvent: {}
+[20.239187] (-) TimerEvent: {}
+[20.290722] (so101_bringup) StdoutLine: {'line': b'-- Default C++ standard: 201703\n'}
+[20.290895] (so101_bringup) StdoutLine: {'line': b'-- Minimal C++ standard upgraded to 11\n'}
+[20.291006] (so101_bringup) StdoutLine: {'line': b'-- C++ standard sufficient: Minimal required 11, currently defined: 17\n'}
+[20.291754] (so101_bringup) StdoutLine: {'line': b'-- Minimal C++ standard upgraded to 17\n'}
+[20.291870] (so101_bringup) StdoutLine: {'line': b'-- C++ standard sufficient: Minimal required 17, currently defined: 17\n'}
+[20.339264] (-) TimerEvent: {}
+[20.339493] (so101_bringup) StdoutLine: {'line': b'-- Configuring done\n'}
+[20.363594] (so101_bringup) StdoutLine: {'line': b'-- Generating done\n'}
+[20.371191] (so101_bringup) StdoutLine: {'line': b'-- Build files have been written to: /home/marsuser/so101_ws/build/so101_bringup\n'}
+[20.379670] (so101_bringup) CommandEnded: {'returncode': 0}
+[20.380190] (so101_bringup) JobProgress: {'identifier': 'so101_bringup', 'progress': 'build'}
+[20.380546] (so101_bringup) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/marsuser/so101_ws/build/so101_bringup', '--', '-j32', '-l32'], 'cwd': '/home/marsuser/so101_ws/build/so101_bringup', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'marsuser'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/marsuser/so101_ws/install/so101_msgs/lib:/home/marsuser/so101_ws/install/so101_kinematics/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/opt/openrobots/lib'), ('HOME', '/home/marsuser'), ('OLDPWD', '/home/marsuser/so101_ws/src/so101_msgs'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2768'), ('SYSTEMD_EXEC_PID', '3260'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '8056'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'marsuser'), ('JOURNAL_STREAM', '8:31154'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/openrobots/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'marsuser'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda/bin:/opt/openrobots/bin:/home/marsuser/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/marsnew:@/tmp/.ICE-unix/3086,unix/marsnew:/tmp/.ICE-unix/3086'), ('INVOCATION_ID', '3e6f269566e14822a468b397cf86b7a8'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/marsuser/so101_ws/install/so101_msgs:/home/marsuser/so101_ws/install/so101_kinematics:/home/marsuser/so101_ws/install/so101_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('TERMINATOR_UUID', 'urn:uuid:a05ea11a-b9ec-44cb-993c-7ef4875380d9'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', ':/home/marsuser/urdf_ws/install/rovermk2_description/share:/home/marsuser/urdf_ws/install/manipmk1_description/share'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/marsuser/so101_ws/build/so101_bringup'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/marsuser/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/opt/openrobots/lib/python3.10/site-packages:'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/marsuser/so101_ws/install/so101_msgs:/home/marsuser/so101_ws/install/so101_kinematics:/home/marsuser/so101_ws/install/so101_description:/opt/openrobots:/opt/ros/humble')]), 'shell': False}
+[20.419852] (so101_bringup) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/tcp_bridge_node.dir/src/tcp_bridge_node.cpp.o\x1b[0m\n'}
+[20.421058] (so101_bringup) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/safety_gate_node.dir/src/safety_gate_node.cpp.o\x1b[0m\n'}
+[20.421136] (so101_bringup) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/cartesian_controller_node.dir/src/cartesian_controller_node.cpp.o\x1b[0m\n'}
+[20.439324] (-) TimerEvent: {}
+[20.539500] (-) TimerEvent: {}
+[20.639694] (-) TimerEvent: {}
+[20.739915] (-) TimerEvent: {}
+[20.840185] (-) TimerEvent: {}
+[20.940465] (-) TimerEvent: {}
+[21.040745] (-) TimerEvent: {}
+[21.141019] (-) TimerEvent: {}
+[21.241315] (-) TimerEvent: {}
+[21.341604] (-) TimerEvent: {}
+[21.441884] (-) TimerEvent: {}
+[21.542182] (-) TimerEvent: {}
+[21.642486] (-) TimerEvent: {}
+[21.742827] (-) TimerEvent: {}
+[21.843092] (-) TimerEvent: {}
+[21.943356] (-) TimerEvent: {}
+[22.043633] (-) TimerEvent: {}
+[22.143915] (-) TimerEvent: {}
+[22.244198] (-) TimerEvent: {}
+[22.344485] (-) TimerEvent: {}
+[22.444772] (-) TimerEvent: {}
+[22.545048] (-) TimerEvent: {}
+[22.645365] (-) TimerEvent: {}
+[22.745669] (-) TimerEvent: {}
+[22.845989] (-) TimerEvent: {}
+[22.946292] (-) TimerEvent: {}
+[23.046592] (-) TimerEvent: {}
+[23.146882] (-) TimerEvent: {}
+[23.247181] (-) TimerEvent: {}
+[23.347479] (-) TimerEvent: {}
+[23.447761] (-) TimerEvent: {}
+[23.548060] (-) TimerEvent: {}
+[23.648405] (-) TimerEvent: {}
+[23.748712] (-) TimerEvent: {}
+[23.849030] (-) TimerEvent: {}
+[23.949338] (-) TimerEvent: {}
+[24.049635] (-) TimerEvent: {}
+[24.149936] (-) TimerEvent: {}
+[24.250214] (-) TimerEvent: {}
+[24.350674] (-) TimerEvent: {}
+[24.451361] (-) TimerEvent: {}
+[24.551675] (-) TimerEvent: {}
+[24.652013] (-) TimerEvent: {}
+[24.752344] (-) TimerEvent: {}
+[24.852665] (-) TimerEvent: {}
+[24.952993] (-) TimerEvent: {}
+[25.053427] (-) TimerEvent: {}
+[25.153864] (-) TimerEvent: {}
+[25.254197] (-) TimerEvent: {}
+[25.354491] (-) TimerEvent: {}
+[25.454795] (-) TimerEvent: {}
+[25.555087] (-) TimerEvent: {}
+[25.655372] (-) TimerEvent: {}
+[25.755654] (-) TimerEvent: {}
+[25.855934] (-) TimerEvent: {}
+[25.956221] (-) TimerEvent: {}
+[26.056529] (-) TimerEvent: {}
+[26.156822] (-) TimerEvent: {}
+[26.257112] (-) TimerEvent: {}
+[26.357413] (-) TimerEvent: {}
+[26.384424] (so101_bringup) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX executable tcp_bridge_node\x1b[0m\n'}
+[26.457506] (-) TimerEvent: {}
+[26.557785] (-) TimerEvent: {}
+[26.652060] (so101_bringup) StdoutLine: {'line': b'[ 66%] Built target tcp_bridge_node\n'}
+[26.657837] (-) TimerEvent: {}
+[26.758078] (-) TimerEvent: {}
+[26.858427] (-) TimerEvent: {}
+[26.958706] (-) TimerEvent: {}
+[27.058979] (-) TimerEvent: {}
+[27.159278] (-) TimerEvent: {}
+[27.259560] (-) TimerEvent: {}
+[27.359838] (-) TimerEvent: {}
+[27.460116] (-) TimerEvent: {}
+[27.560400] (-) TimerEvent: {}
+[27.660665] (-) TimerEvent: {}
+[27.760954] (-) TimerEvent: {}
+[27.861235] (-) TimerEvent: {}
+[27.961507] (-) TimerEvent: {}
+[28.061786] (-) TimerEvent: {}
+[28.162069] (-) TimerEvent: {}
+[28.262486] (-) TimerEvent: {}
+[28.362751] (-) TimerEvent: {}
+[28.463020] (-) TimerEvent: {}
+[28.563303] (-) TimerEvent: {}
+[28.663573] (-) TimerEvent: {}
+[28.763848] (-) TimerEvent: {}
+[28.864139] (-) TimerEvent: {}
+[28.964418] (-) TimerEvent: {}
+[29.064686] (-) TimerEvent: {}
+[29.164962] (-) TimerEvent: {}
+[29.265243] (-) TimerEvent: {}
+[29.365854] (-) TimerEvent: {}
+[29.466145] (-) TimerEvent: {}
+[29.566413] (-) TimerEvent: {}
+[29.666678] (-) TimerEvent: {}
+[29.766949] (-) TimerEvent: {}
+[29.867189] (-) TimerEvent: {}
+[29.967456] (-) TimerEvent: {}
+[30.067716] (-) TimerEvent: {}
+[30.168006] (-) TimerEvent: {}
+[30.268322] (-) TimerEvent: {}
+[30.368602] (-) TimerEvent: {}
+[30.468851] (-) TimerEvent: {}
+[30.569064] (-) TimerEvent: {}
+[30.669284] (-) TimerEvent: {}
+[30.769497] (-) TimerEvent: {}
+[30.869708] (-) TimerEvent: {}
+[30.969931] (-) TimerEvent: {}
+[31.070151] (-) TimerEvent: {}
+[31.170390] (-) TimerEvent: {}
+[31.270655] (-) TimerEvent: {}
+[31.370873] (-) TimerEvent: {}
+[31.471105] (-) TimerEvent: {}
+[31.571686] (-) TimerEvent: {}
+[31.671876] (-) TimerEvent: {}
+[31.772074] (-) TimerEvent: {}
+[31.872271] (-) TimerEvent: {}
+[31.972466] (-) TimerEvent: {}
+[32.072653] (-) TimerEvent: {}
+[32.172848] (-) TimerEvent: {}
+[32.273022] (-) TimerEvent: {}
+[32.373218] (-) TimerEvent: {}
+[32.473413] (-) TimerEvent: {}
+[32.573615] (-) TimerEvent: {}
+[32.673823] (-) TimerEvent: {}
+[32.774012] (-) TimerEvent: {}
+[32.874536] (-) TimerEvent: {}
+[32.975094] (-) TimerEvent: {}
+[33.075337] (-) TimerEvent: {}
+[33.175606] (-) TimerEvent: {}
+[33.275869] (-) TimerEvent: {}
+[33.376251] (-) TimerEvent: {}
+[33.476518] (-) TimerEvent: {}
+[33.576828] (-) TimerEvent: {}
+[33.677149] (-) TimerEvent: {}
+[33.717446] (so101_bringup) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking CXX executable safety_gate_node\x1b[0m\n'}
+[33.777248] (-) TimerEvent: {}
+[33.877523] (-) TimerEvent: {}
+[33.977780] (-) TimerEvent: {}
+[34.078055] (-) TimerEvent: {}
+[34.155839] (so101_bringup) StdoutLine: {'line': b'[ 83%] Built target safety_gate_node\n'}
+[34.178133] (-) TimerEvent: {}
+[34.278299] (-) TimerEvent: {}
+[34.378466] (-) TimerEvent: {}
+[34.478624] (-) TimerEvent: {}
+[34.578785] (-) TimerEvent: {}
+[34.678967] (-) TimerEvent: {}
+[34.779168] (-) TimerEvent: {}
+[34.879448] (-) TimerEvent: {}
+[34.979658] (-) TimerEvent: {}
+[35.079878] (-) TimerEvent: {}
+[35.180077] (-) TimerEvent: {}
+[35.280286] (-) TimerEvent: {}
+[35.380487] (-) TimerEvent: {}
+[35.480749] (-) TimerEvent: {}
+[35.580957] (-) TimerEvent: {}
+[35.681176] (-) TimerEvent: {}
+[35.781379] (-) TimerEvent: {}
+[35.881580] (-) TimerEvent: {}
+[35.981776] (-) TimerEvent: {}
+[36.081970] (-) TimerEvent: {}
+[36.182157] (-) TimerEvent: {}
+[36.282340] (-) TimerEvent: {}
+[36.382546] (-) TimerEvent: {}
+[36.482738] (-) TimerEvent: {}
+[36.582942] (-) TimerEvent: {}
+[36.683154] (-) TimerEvent: {}
+[36.783344] (-) TimerEvent: {}
+[36.883536] (-) TimerEvent: {}
+[36.983745] (-) TimerEvent: {}
+[37.084016] (-) TimerEvent: {}
+[37.184291] (-) TimerEvent: {}
+[37.284740] (-) TimerEvent: {}
+[37.384894] (-) TimerEvent: {}
+[37.485048] (-) TimerEvent: {}
+[37.585247] (-) TimerEvent: {}
+[37.685473] (-) TimerEvent: {}
+[37.785774] (-) TimerEvent: {}
+[37.886093] (-) TimerEvent: {}
+[37.986440] (-) TimerEvent: {}
+[38.028050] (so101_bringup) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable cartesian_controller_node\x1b[0m\n'}
+[38.086785] (-) TimerEvent: {}
+[38.186975] (-) TimerEvent: {}
+[38.287183] (-) TimerEvent: {}
+[38.387468] (-) TimerEvent: {}
+[38.487747] (-) TimerEvent: {}
+[38.587984] (-) TimerEvent: {}
+[38.651036] (so101_bringup) StdoutLine: {'line': b'[100%] Built target cartesian_controller_node\n'}
+[38.662497] (so101_bringup) CommandEnded: {'returncode': 0}
+[38.663016] (so101_bringup) JobProgress: {'identifier': 'so101_bringup', 'progress': 'install'}
+[38.663299] (so101_bringup) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/marsuser/so101_ws/build/so101_bringup'], 'cwd': '/home/marsuser/so101_ws/build/so101_bringup', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'marsuser'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/marsuser/so101_ws/install/so101_msgs/lib:/home/marsuser/so101_ws/install/so101_kinematics/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/opt/openrobots/lib'), ('HOME', '/home/marsuser'), ('OLDPWD', '/home/marsuser/so101_ws/src/so101_msgs'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2768'), ('SYSTEMD_EXEC_PID', '3260'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '8056'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'marsuser'), ('JOURNAL_STREAM', '8:31154'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/openrobots/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'marsuser'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda/bin:/opt/openrobots/bin:/home/marsuser/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/marsnew:@/tmp/.ICE-unix/3086,unix/marsnew:/tmp/.ICE-unix/3086'), ('INVOCATION_ID', '3e6f269566e14822a468b397cf86b7a8'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/marsuser/so101_ws/install/so101_msgs:/home/marsuser/so101_ws/install/so101_kinematics:/home/marsuser/so101_ws/install/so101_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('TERMINATOR_UUID', 'urn:uuid:a05ea11a-b9ec-44cb-993c-7ef4875380d9'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', ':/home/marsuser/urdf_ws/install/rovermk2_description/share:/home/marsuser/urdf_ws/install/manipmk1_description/share'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/marsuser/so101_ws/build/so101_bringup'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/marsuser/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/opt/openrobots/lib/python3.10/site-packages:'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/marsuser/so101_ws/install/so101_msgs:/home/marsuser/so101_ws/install/so101_kinematics:/home/marsuser/so101_ws/install/so101_description:/opt/openrobots:/opt/ros/humble')]), 'shell': False}
+[38.668976] (so101_bringup) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[38.669075] (so101_bringup) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_bringup/share/so101_bringup/launch\n'}
+[38.669166] (so101_bringup) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_bringup/share/so101_bringup/launch/so101_stack.launch.py\n'}
+[38.669259] (so101_bringup) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_bringup/share/so101_bringup/config\n'}
+[38.669339] (so101_bringup) StdoutLine: {'line': b'-- Installing: /home/marsuser/so101_ws/install/so101_bringup/share/so101_bringup/config/robot_params.yaml\n'}
+[38.669485] (so101_bringup) StderrLine: {'line': b'\x1b[31mCMake Error at cmake_install.cmake:46 (file):\n'}
+[38.669563] (so101_bringup) StderrLine: {'line': b'  file INSTALL cannot find "/home/marsuser/so101_ws/src/so101_bringup/rviz":\n'}
+[38.669618] (so101_bringup) StderrLine: {'line': b'  No such file or directory.\n'}
+[38.669668] (so101_bringup) StderrLine: {'line': b'\n'}
+[38.669717] (so101_bringup) StderrLine: {'line': b'\x1b[0m\n'}
+[38.670536] (so101_bringup) CommandEnded: {'returncode': 1}
+[38.675167] (so101_bringup) JobEnded: {'identifier': 'so101_bringup', 'rc': 1}
+[38.685519] (-) EventReactorShutdown: {}

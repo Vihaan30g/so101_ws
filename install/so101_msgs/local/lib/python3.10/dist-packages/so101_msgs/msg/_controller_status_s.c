@@ -1,0 +1,1 @@
+/home/marsuser/so101_ws/build/so101_msgs/rosidl_generator_py/so101_msgs/msg/_controller_status_s.c

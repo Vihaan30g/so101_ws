@@ -1,0 +1,324 @@
+[0.009s] Invoking command in '/home/marsuser/so101_ws/build/so101_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/marsuser/so101_ws/src/so101_msgs -DCMAKE_INSTALL_PREFIX=/home/marsuser/so101_ws/install/so101_msgs
+[0.084s] -- The C compiler identification is GNU 11.4.0
+[0.141s] -- The CXX compiler identification is GNU 11.4.0
+[0.148s] -- Detecting C compiler ABI info
+[0.203s] -- Detecting C compiler ABI info - done
+[0.207s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.208s] -- Detecting C compile features
+[0.208s] -- Detecting C compile features - done
+[0.211s] -- Detecting CXX compiler ABI info
+[0.271s] -- Detecting CXX compiler ABI info - done
+[0.275s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.275s] -- Detecting CXX compile features
+[0.276s] -- Detecting CXX compile features - done
+[0.282s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.388s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.485s] -- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.489s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.497s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.540s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.577s] -- Found std_msgs: 4.9.1 (/opt/ros/humble/share/std_msgs/cmake)
+[0.602s] -- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.824s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.998s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.216s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.232s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.234s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.253s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.253s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.253s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.254s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.268s] -- Found PythonExtra: .so  
+[1.369s] -- Configuring done
+[1.398s] -- Generating done
+[1.407s] -- Build files have been written to: /home/marsuser/so101_ws/build/so101_msgs
+[1.412s] Invoked command in '/home/marsuser/so101_ws/build/so101_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/marsuser/so101_ws/src/so101_msgs -DCMAKE_INSTALL_PREFIX=/home/marsuser/so101_ws/install/so101_msgs
+[1.413s] Invoking command in '/home/marsuser/so101_ws/build/so101_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/marsuser/so101_ws/build/so101_msgs -- -j32 -l32
+[1.446s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.453s] [  3%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[1.454s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.460s] [  5%] Built target ament_cmake_python_copy_so101_msgs
+[1.627s] running egg_info
+[1.627s] creating so101_msgs.egg-info
+[1.627s] writing so101_msgs.egg-info/PKG-INFO
+[1.627s] writing dependency_links to so101_msgs.egg-info/dependency_links.txt
+[1.627s] writing top-level names to so101_msgs.egg-info/top_level.txt
+[1.628s] writing manifest file 'so101_msgs.egg-info/SOURCES.txt'
+[1.629s] reading manifest file 'so101_msgs.egg-info/SOURCES.txt'
+[1.629s] writing manifest file 'so101_msgs.egg-info/SOURCES.txt'
+[1.647s] [  5%] Built target ament_cmake_python_build_so101_msgs_egg
+[1.699s] [  5%] Built target so101_msgs__rs
+[1.779s] [  5%] Built target so101_msgs__cpp
+[1.787s] [  7%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.788s] [  8%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.788s] [ 10%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.792s] [ 12%] [32mBuilding C object CMakeFiles/so101_msgs__rosidl_generator_c.dir/rosidl_generator_c/so101_msgs/msg/detail/joint_velocity_command__functions.c.o[0m
+[1.792s] [ 14%] [32mBuilding C object CMakeFiles/so101_msgs__rosidl_generator_c.dir/rosidl_generator_c/so101_msgs/msg/detail/cartesian_command__functions.c.o[0m
+[1.793s] [ 16%] [32mBuilding C object CMakeFiles/so101_msgs__rosidl_generator_c.dir/rosidl_generator_c/so101_msgs/msg/detail/joint_command__functions.c.o[0m
+[1.793s] [ 17%] [32mBuilding C object CMakeFiles/so101_msgs__rosidl_generator_c.dir/rosidl_generator_c/so101_msgs/msg/detail/controller_status__functions.c.o[0m
+[1.835s] [ 19%] [32m[1mLinking C shared library libso101_msgs__rosidl_generator_c.so[0m
+[1.866s] [ 19%] Built target so101_msgs__rosidl_generator_c
+[1.875s] [ 21%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.875s] [ 23%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.875s] [ 25%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.053s] [ 26%] [32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/so101_msgs/msg/cartesian_command__type_support.cpp.o[0m
+[2.053s] [ 28%] [32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/so101_msgs/msg/joint_command__type_support.cpp.o[0m
+[2.054s] [ 32%] [32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/so101_msgs/msg/joint_velocity_command__type_support.cpp.o[0m
+[2.054s] [ 32%] [32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/so101_msgs/msg/controller_status__type_support.cpp.o[0m
+[2.073s] [ 35%] [32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/so101_msgs/msg/detail/joint_velocity_command__type_support.cpp.o[0m
+[2.073s] [ 35%] [32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/so101_msgs/msg/detail/joint_command__type_support.cpp.o[0m
+[2.073s] [ 37%] [32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/so101_msgs/msg/detail/controller_status__type_support.cpp.o[0m
+[2.075s] [ 39%] [32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/so101_msgs/msg/detail/cartesian_command__type_support.cpp.o[0m
+[2.116s] [ 42%] [32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/so101_msgs/msg/detail/dds_fastrtps/joint_command__type_support.cpp.o[0m
+[2.116s] [ 42%] [32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/so101_msgs/msg/detail/dds_fastrtps/joint_velocity_command__type_support.cpp.o[0m
+[2.116s] [ 44%] [32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/so101_msgs/msg/detail/dds_fastrtps/cartesian_command__type_support.cpp.o[0m
+[2.120s] [ 46%] [32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/so101_msgs/msg/detail/dds_fastrtps/controller_status__type_support.cpp.o[0m
+[2.158s] [ 51%] [32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/so101_msgs/msg/joint_command__type_support.cpp.o[0m
+[2.159s] [ 51%] [32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/so101_msgs/msg/joint_velocity_command__type_support.cpp.o[0m
+[2.159s] [ 51%] [32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/so101_msgs/msg/cartesian_command__type_support.cpp.o[0m
+[2.160s] [ 53%] [32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/so101_msgs/msg/controller_status__type_support.cpp.o[0m
+[2.202s] [ 55%] [32m[1mLinking CXX shared library libso101_msgs__rosidl_typesupport_c.so[0m
+[2.213s] [ 60%] [32mBuilding C object CMakeFiles/so101_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/so101_msgs/msg/detail/controller_status__type_support.c.o[0m
+[2.213s] [ 60%] [32mBuilding C object CMakeFiles/so101_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/so101_msgs/msg/detail/joint_velocity_command__type_support.c.o[0m
+[2.213s] [ 60%] [32mBuilding C object CMakeFiles/so101_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/so101_msgs/msg/detail/joint_command__type_support.c.o[0m
+[2.213s] [ 62%] [32mBuilding C object CMakeFiles/so101_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/so101_msgs/msg/detail/cartesian_command__type_support.c.o[0m
+[2.229s] [ 64%] [32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/so101_msgs/msg/detail/joint_command__type_support_c.cpp.o[0m
+[2.230s] [ 67%] [32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/so101_msgs/msg/detail/cartesian_command__type_support_c.cpp.o[0m
+[2.230s] [ 67%] [32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/so101_msgs/msg/detail/joint_velocity_command__type_support_c.cpp.o[0m
+[2.230s] [ 69%] [32mBuilding CXX object CMakeFiles/so101_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/so101_msgs/msg/detail/controller_status__type_support_c.cpp.o[0m
+[2.264s] [ 69%] Built target so101_msgs__rosidl_typesupport_c
+[2.266s] [ 71%] [32m[1mLinking C shared library libso101_msgs__rosidl_typesupport_introspection_c.so[0m
+[2.303s] [ 71%] Built target so101_msgs__rosidl_typesupport_introspection_c
+[2.309s] [ 73%] [32m[1mLinking CXX shared library libso101_msgs__rosidl_typesupport_cpp.so[0m
+[2.348s] [ 73%] Built target so101_msgs__rosidl_typesupport_cpp
+[2.453s] [ 75%] [32m[1mLinking CXX shared library libso101_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[2.510s] [ 75%] Built target so101_msgs__rosidl_typesupport_introspection_cpp
+[2.515s] [ 76%] [32m[1mLinking CXX shared library libso101_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[2.516s] [ 78%] [32m[1mLinking CXX shared library libso101_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[2.570s] [ 78%] Built target so101_msgs__rosidl_typesupport_fastrtps_c
+[2.572s] [ 78%] Built target so101_msgs__rosidl_typesupport_fastrtps_cpp
+[2.588s] [ 78%] Built target so101_msgs
+[2.604s] [ 80%] [34m[1mGenerating Python code for ROS interfaces[0m
+[3.093s] [ 80%] Built target so101_msgs__py
+[3.109s] [ 82%] [32mBuilding C object CMakeFiles/so101_msgs__rosidl_generator_py.dir/rosidl_generator_py/so101_msgs/msg/_cartesian_command_s.c.o[0m
+[3.109s] [ 83%] [32mBuilding C object CMakeFiles/so101_msgs__rosidl_generator_py.dir/rosidl_generator_py/so101_msgs/msg/_joint_velocity_command_s.c.o[0m
+[3.109s] [ 85%] [32mBuilding C object CMakeFiles/so101_msgs__rosidl_generator_py.dir/rosidl_generator_py/so101_msgs/msg/_joint_command_s.c.o[0m
+[3.110s] [ 87%] [32mBuilding C object CMakeFiles/so101_msgs__rosidl_generator_py.dir/rosidl_generator_py/so101_msgs/msg/_controller_status_s.c.o[0m
+[3.199s] [ 89%] [32m[1mLinking C shared library rosidl_generator_py/so101_msgs/libso101_msgs__rosidl_generator_py.so[0m
+[3.233s] [ 89%] Built target so101_msgs__rosidl_generator_py
+[3.249s] [ 91%] [32mBuilding C object CMakeFiles/so101_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/so101_msgs/_so101_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[3.250s] [ 92%] [32mBuilding C object CMakeFiles/so101_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/so101_msgs/_so101_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[3.251s] [ 94%] [32mBuilding C object CMakeFiles/so101_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/so101_msgs/_so101_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[3.326s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/so101_msgs/so101_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.326s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/so101_msgs/so101_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.326s] [100%] [32m[1mLinking C shared library rosidl_generator_py/so101_msgs/so101_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.358s] [100%] Built target so101_msgs__rosidl_typesupport_introspection_c__pyext
+[3.358s] [100%] Built target so101_msgs__rosidl_typesupport_fastrtps_c__pyext
+[3.358s] [100%] Built target so101_msgs__rosidl_typesupport_c__pyext
+[3.368s] Invoked command in '/home/marsuser/so101_ws/build/so101_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/marsuser/so101_ws/build/so101_msgs -- -j32 -l32
+[3.370s] Invoking command in '/home/marsuser/so101_ws/build/so101_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/marsuser/so101_ws/build/so101_msgs
+[3.375s] -- Install configuration: ""
+[3.375s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/ament_index/resource_index/rosidl_interfaces/so101_msgs
+[3.375s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs
+[3.376s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg
+[3.376s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail
+[3.376s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__struct.h
+[3.376s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__type_support.h
+[3.376s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__functions.h
+[3.376s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__struct.h
+[3.376s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__struct.h
+[3.376s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__functions.h
+[3.376s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__type_support.h
+[3.376s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__functions.c
+[3.376s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__functions.c
+[3.376s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__functions.h
+[3.377s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__functions.c
+[3.377s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__struct.h
+[3.377s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__type_support.h
+[3.377s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__type_support.h
+[3.377s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__functions.h
+[3.377s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__functions.c
+[3.377s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/joint_command.h
+[3.377s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/cartesian_command.h
+[3.377s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/joint_velocity_command.h
+[3.377s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/rosidl_generator_c__visibility_control.h
+[3.378s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/controller_status.h
+[3.378s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/environment/library_path.sh
+[3.378s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/environment/library_path.dsv
+[3.378s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_generator_c.so
+[3.378s] -- Set runtime path of "/home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_generator_c.so" to ""
+[3.378s] -- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs
+[3.378s] -- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg
+[3.378s] -- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail
+[3.378s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__rosidl_typesupport_fastrtps_c.h
+[3.379s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__rosidl_typesupport_fastrtps_c.h
+[3.379s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__rosidl_typesupport_fastrtps_c.h
+[3.379s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__rosidl_typesupport_fastrtps_c.h
+[3.379s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[3.379s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_fastrtps_c.so
+[3.379s] -- Set runtime path of "/home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[3.379s] -- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs
+[3.379s] -- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg
+[3.379s] -- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail
+[3.379s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__rosidl_typesupport_introspection_c.h
+[3.379s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__type_support.c
+[3.379s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__type_support.c
+[3.380s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__rosidl_typesupport_introspection_c.h
+[3.380s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__type_support.c
+[3.380s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__rosidl_typesupport_introspection_c.h
+[3.380s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__rosidl_typesupport_introspection_c.h
+[3.380s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__type_support.c
+[3.380s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[3.380s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_introspection_c.so
+[3.380s] -- Set runtime path of "/home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_introspection_c.so" to ""
+[3.380s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_c.so
+[3.381s] -- Set runtime path of "/home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_c.so" to ""
+[3.381s] -- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs
+[3.381s] -- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg
+[3.381s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/joint_velocity_command.hpp
+[3.381s] -- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail
+[3.381s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__type_support.hpp
+[3.381s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__struct.hpp
+[3.381s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__type_support.hpp
+[3.381s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__type_support.hpp
+[3.381s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__builder.hpp
+[3.381s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__builder.hpp
+[3.381s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__struct.hpp
+[3.382s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__struct.hpp
+[3.382s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__type_support.hpp
+[3.382s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__traits.hpp
+[3.382s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__traits.hpp
+[3.382s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__builder.hpp
+[3.382s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__struct.hpp
+[3.382s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__builder.hpp
+[3.382s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__traits.hpp
+[3.382s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__traits.hpp
+[3.382s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/joint_command.hpp
+[3.383s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/controller_status.hpp
+[3.383s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/cartesian_command.hpp
+[3.383s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[3.383s] -- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs
+[3.383s] -- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg
+[3.383s] -- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail
+[3.383s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__rosidl_typesupport_fastrtps_cpp.hpp
+[3.383s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__rosidl_typesupport_fastrtps_cpp.hpp
+[3.383s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__rosidl_typesupport_fastrtps_cpp.hpp
+[3.383s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/dds_fastrtps
+[3.383s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__rosidl_typesupport_fastrtps_cpp.hpp
+[3.383s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[3.384s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_fastrtps_cpp.so
+[3.384s] -- Set runtime path of "/home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[3.384s] -- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs
+[3.384s] -- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg
+[3.384s] -- Up-to-date: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail
+[3.384s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__type_support.cpp
+[3.384s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__type_support.cpp
+[3.384s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__type_support.cpp
+[3.384s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__rosidl_typesupport_introspection_cpp.hpp
+[3.384s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_velocity_command__rosidl_typesupport_introspection_cpp.hpp
+[3.384s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/controller_status__type_support.cpp
+[3.385s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/cartesian_command__rosidl_typesupport_introspection_cpp.hpp
+[3.385s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/include/so101_msgs/so101_msgs/msg/detail/joint_command__rosidl_typesupport_introspection_cpp.hpp
+[3.385s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_introspection_cpp.so
+[3.385s] -- Set runtime path of "/home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[3.385s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_cpp.so
+[3.385s] -- Set runtime path of "/home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_typesupport_cpp.so" to ""
+[3.385s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/environment/pythonpath.sh
+[3.386s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/environment/pythonpath.dsv
+[3.386s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs-0.0.1-py3.10.egg-info
+[3.386s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs-0.0.1-py3.10.egg-info/SOURCES.txt
+[3.386s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs-0.0.1-py3.10.egg-info/PKG-INFO
+[3.386s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs-0.0.1-py3.10.egg-info/dependency_links.txt
+[3.386s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs-0.0.1-py3.10.egg-info/top_level.txt
+[3.386s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs
+[3.386s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/_so101_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[3.386s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/_so101_msgs_s.ep.rosidl_typesupport_c.c
+[3.386s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/so101_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.387s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/libso101_msgs__rosidl_generator_py.so
+[3.387s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg
+[3.387s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_joint_velocity_command_s.c
+[3.387s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_controller_status.py
+[3.387s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_joint_command.py
+[3.387s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_cartesian_command.py
+[3.387s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/__init__.py
+[3.387s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_controller_status_s.c
+[3.387s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_joint_command_s.c
+[3.387s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_joint_velocity_command.py
+[3.388s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_cartesian_command_s.c
+[3.388s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/__init__.py
+[3.388s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/so101_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.388s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/so101_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.388s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/_so101_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[3.414s] Listing '/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs'...
+[3.414s] Compiling '/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/__init__.py'...
+[3.414s] Listing '/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg'...
+[3.414s] Compiling '/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/__init__.py'...
+[3.414s] Compiling '/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_cartesian_command.py'...
+[3.414s] Compiling '/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_controller_status.py'...
+[3.414s] Compiling '/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_joint_command.py'...
+[3.414s] Compiling '/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/msg/_joint_velocity_command.py'...
+[3.417s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/so101_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.417s] -- Set runtime path of "/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/so101_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.417s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/so101_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.417s] -- Set runtime path of "/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/so101_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.417s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/so101_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.418s] -- Set runtime path of "/home/marsuser/so101_ws/install/so101_msgs/local/lib/python3.10/dist-packages/so101_msgs/so101_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.418s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_generator_py.so
+[3.418s] -- Set runtime path of "/home/marsuser/so101_ws/install/so101_msgs/lib/libso101_msgs__rosidl_generator_py.so" to ""
+[3.418s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/ament_index/resource_index/rust_packages/so101_msgs
+[3.418s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/rust
+[3.418s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/rust/Cargo.toml
+[3.418s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/rust/build.rs
+[3.418s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/rust/src
+[3.419s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/rust/src/msg
+[3.419s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/rust/src/msg/rmw.rs
+[3.419s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/rust/src/msg.rs
+[3.419s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/rust/src/lib.rs
+[3.419s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/msg/CartesianCommand.idl
+[3.419s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/msg/JointVelocityCommand.idl
+[3.419s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/msg/JointCommand.idl
+[3.419s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/msg/ControllerStatus.idl
+[3.419s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/msg/CartesianCommand.msg
+[3.420s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/msg/JointVelocityCommand.msg
+[3.420s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/msg/JointCommand.msg
+[3.420s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/msg/ControllerStatus.msg
+[3.420s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/ament_index/resource_index/package_run_dependencies/so101_msgs
+[3.420s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/ament_index/resource_index/parent_prefix_path/so101_msgs
+[3.420s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/environment/ament_prefix_path.sh
+[3.420s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/environment/ament_prefix_path.dsv
+[3.420s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/environment/path.sh
+[3.420s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/environment/path.dsv
+[3.421s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/local_setup.bash
+[3.421s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/local_setup.sh
+[3.421s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/local_setup.zsh
+[3.421s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/local_setup.dsv
+[3.421s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/package.dsv
+[3.421s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/ament_index/resource_index/packages/so101_msgs
+[3.421s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/export_so101_msgs__rosidl_generator_cExport.cmake
+[3.421s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/export_so101_msgs__rosidl_generator_cExport-noconfig.cmake
+[3.422s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/export_so101_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[3.422s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/export_so101_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[3.422s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/so101_msgs__rosidl_typesupport_introspection_cExport.cmake
+[3.422s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/so101_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.422s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/so101_msgs__rosidl_typesupport_cExport.cmake
+[3.422s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/so101_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[3.422s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/export_so101_msgs__rosidl_generator_cppExport.cmake
+[3.422s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/export_so101_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[3.423s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/export_so101_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[3.423s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/so101_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[3.423s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/so101_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.423s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/so101_msgs__rosidl_typesupport_cppExport.cmake
+[3.423s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/so101_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[3.423s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/export_so101_msgs__rosidl_generator_pyExport.cmake
+[3.423s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/export_so101_msgs__rosidl_generator_pyExport-noconfig.cmake
+[3.423s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/rosidl_cmake-extras.cmake
+[3.424s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.424s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.424s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[3.424s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[3.424s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[3.424s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[3.424s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/so101_msgsConfig.cmake
+[3.424s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/cmake/so101_msgsConfig-version.cmake
+[3.424s] -- Installing: /home/marsuser/so101_ws/install/so101_msgs/share/so101_msgs/package.xml
+[3.427s] Invoked command in '/home/marsuser/so101_ws/build/so101_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/marsuser/so101_ws/build/so101_msgs

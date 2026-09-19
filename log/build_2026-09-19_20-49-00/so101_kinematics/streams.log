@@ -1,0 +1,68 @@
+[0.009s] Invoking command in '/home/marsuser/so101_ws/build/so101_kinematics': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/marsuser/so101_ws/src/so101_kinematics -DCMAKE_INSTALL_PREFIX=/home/marsuser/so101_ws/install/so101_kinematics
+[0.086s] -- The C compiler identification is GNU 11.4.0
+[0.143s] -- The CXX compiler identification is GNU 11.4.0
+[0.150s] -- Detecting C compiler ABI info
+[0.205s] -- Detecting C compiler ABI info - done
+[0.209s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.210s] -- Detecting C compile features
+[0.210s] -- Detecting C compile features - done
+[0.213s] -- Detecting CXX compiler ABI info
+[0.273s] -- Detecting CXX compiler ABI info - done
+[0.281s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.281s] -- Detecting CXX compile features
+[0.282s] -- Detecting CXX compile features - done
+[0.286s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.392s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.529s] -- Found Boost: /usr/include (found version "1.74.0") found components: filesystem serialization 
+[0.530s] -- coal FOUND. coal at /opt/openrobots/lib/libcoal.so
+[0.534s] -- Found Boost: /usr/include (found version "1.74.0") found components: serialization filesystem 
+[0.767s] -- Default C++ standard: 201703
+[0.767s] -- Minimal C++ standard upgraded to 11
+[0.767s] -- C++ standard sufficient: Minimal required 11, currently defined: 17
+[0.768s] -- Minimal C++ standard upgraded to 17
+[0.768s] -- C++ standard sufficient: Minimal required 17, currently defined: 17
+[0.771s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.814s] -- Configuring done
+[0.824s] -- Generating done
+[0.826s] -- Build files have been written to: /home/marsuser/so101_ws/build/so101_kinematics
+[0.832s] Invoked command in '/home/marsuser/so101_ws/build/so101_kinematics' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/marsuser/so101_ws/src/so101_kinematics -DCMAKE_INSTALL_PREFIX=/home/marsuser/so101_ws/install/so101_kinematics
+[0.833s] Invoking command in '/home/marsuser/so101_ws/build/so101_kinematics': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/marsuser/so101_ws/build/so101_kinematics -- -j32 -l32
+[0.870s] [ 25%] [32mBuilding CXX object CMakeFiles/so101_kinematics.dir/src/so101_kinematics.cpp.o[0m
+[13.293s] [ 50%] [32m[1mLinking CXX shared library libso101_kinematics.so[0m
+[13.535s] [ 50%] Built target so101_kinematics
+[13.550s] [ 75%] [32mBuilding CXX object CMakeFiles/test_kinematics_node.dir/src/test_kinematics_node.cpp.o[0m
+[18.955s] [100%] [32m[1mLinking CXX executable test_kinematics_node[0m
+[19.087s] [100%] Built target test_kinematics_node
+[19.097s] Invoked command in '/home/marsuser/so101_ws/build/so101_kinematics' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/marsuser/so101_ws/build/so101_kinematics -- -j32 -l32
+[19.098s] Invoking command in '/home/marsuser/so101_ws/build/so101_kinematics': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/marsuser/so101_ws/build/so101_kinematics
+[19.104s] -- Install configuration: ""
+[19.104s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/include
+[19.104s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/include/so101_kinematics
+[19.104s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/include/so101_kinematics/so101_kinematics.hpp
+[19.104s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/lib/libso101_kinematics.so
+[19.110s] -- Set runtime path of "/home/marsuser/so101_ws/install/so101_kinematics/lib/libso101_kinematics.so" to ""
+[19.110s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/lib/so101_kinematics/test_kinematics_node
+[19.111s] -- Set runtime path of "/home/marsuser/so101_ws/install/so101_kinematics/lib/so101_kinematics/test_kinematics_node" to ""
+[19.111s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/environment/library_path.sh
+[19.111s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/environment/library_path.dsv
+[19.112s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/ament_index/resource_index/package_run_dependencies/so101_kinematics
+[19.112s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/ament_index/resource_index/parent_prefix_path/so101_kinematics
+[19.112s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/environment/ament_prefix_path.sh
+[19.112s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/environment/ament_prefix_path.dsv
+[19.112s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/environment/path.sh
+[19.112s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/environment/path.dsv
+[19.112s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/local_setup.bash
+[19.112s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/local_setup.sh
+[19.113s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/local_setup.zsh
+[19.113s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/local_setup.dsv
+[19.113s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/package.dsv
+[19.113s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/ament_index/resource_index/packages/so101_kinematics
+[19.113s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake/export_so101_kinematicsExport.cmake
+[19.113s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake/export_so101_kinematicsExport-noconfig.cmake
+[19.113s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake/ament_cmake_export_targets-extras.cmake
+[19.113s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake/ament_cmake_export_dependencies-extras.cmake
+[19.113s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake/ament_cmake_export_include_directories-extras.cmake
+[19.114s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake/so101_kinematicsConfig.cmake
+[19.114s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake/so101_kinematicsConfig-version.cmake
+[19.114s] -- Installing: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/package.xml
+[19.115s] Invoked command in '/home/marsuser/so101_ws/build/so101_kinematics' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/marsuser/so101_ws/build/so101_kinematics

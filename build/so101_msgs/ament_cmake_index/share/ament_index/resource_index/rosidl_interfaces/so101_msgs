@@ -1,0 +1,8 @@
+msg/CartesianCommand.idl
+msg/CartesianCommand.msg
+msg/ControllerStatus.idl
+msg/ControllerStatus.msg
+msg/JointCommand.idl
+msg/JointCommand.msg
+msg/JointVelocityCommand.idl
+msg/JointVelocityCommand.msg

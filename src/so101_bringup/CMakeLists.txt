@@ -35,8 +35,14 @@ ament_target_dependencies(tcp_bridge_node rclcpp sensor_msgs so101_msgs)
 
 # Installation
 install(
-  DIRECTORY launch config rviz
+  DIRECTORY launch config #rviz
   DESTINATION share/${PROJECT_NAME}
+)
+
+install(
+  PROGRAMS scripts/keyboard_servo.py
+  DESTINATION lib/${PROJECT_NAME}
+  RENAME keyboard_servo
 )
 
 install(TARGETS

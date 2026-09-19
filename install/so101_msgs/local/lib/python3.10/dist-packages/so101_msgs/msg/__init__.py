@@ -1,0 +1,1 @@
+/home/marsuser/so101_ws/build/so101_msgs/rosidl_generator_py/so101_msgs/msg/__init__.py

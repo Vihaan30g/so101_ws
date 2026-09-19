@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "so101_msgs__rs",
+		"source" : "/home/marsuser/so101_ws/build/so101_msgs/so101_msgs__rs"
+	}
+}

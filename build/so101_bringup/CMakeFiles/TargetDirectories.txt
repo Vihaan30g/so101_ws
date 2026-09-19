@@ -1,0 +1,12 @@
+/home/marsuser/so101_ws/build/so101_bringup/CMakeFiles/uninstall.dir
+/home/marsuser/so101_ws/build/so101_bringup/CMakeFiles/so101_bringup_uninstall.dir
+/home/marsuser/so101_ws/build/so101_bringup/CMakeFiles/cartesian_controller_node.dir
+/home/marsuser/so101_ws/build/so101_bringup/CMakeFiles/safety_gate_node.dir
+/home/marsuser/so101_ws/build/so101_bringup/CMakeFiles/tcp_bridge_node.dir
+/home/marsuser/so101_ws/build/so101_bringup/CMakeFiles/test.dir
+/home/marsuser/so101_ws/build/so101_bringup/CMakeFiles/edit_cache.dir
+/home/marsuser/so101_ws/build/so101_bringup/CMakeFiles/rebuild_cache.dir
+/home/marsuser/so101_ws/build/so101_bringup/CMakeFiles/list_install_components.dir
+/home/marsuser/so101_ws/build/so101_bringup/CMakeFiles/install.dir
+/home/marsuser/so101_ws/build/so101_bringup/CMakeFiles/install/local.dir
+/home/marsuser/so101_ws/build/so101_bringup/CMakeFiles/install/strip.dir

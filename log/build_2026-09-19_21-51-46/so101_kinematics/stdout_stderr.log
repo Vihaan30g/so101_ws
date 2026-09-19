@@ -1,0 +1,44 @@
+-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found Boost: /usr/include (found version "1.74.0") found components: filesystem serialization 
+-- coal FOUND. coal at /opt/openrobots/lib/libcoal.so
+-- Found Boost: /usr/include (found version "1.74.0") found components: serialization filesystem 
+-- Default C++ standard: 201703
+-- C++ standard sufficient: Minimal required 17, currently defined: 17
+-- C++ standard sufficient: Minimal required 17, currently defined: 17
+-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/marsuser/so101_ws/build/so101_kinematics
+[35m[1mConsolidate compiler generated dependencies of target so101_kinematics[0m
+[ 50%] Built target so101_kinematics
+[35m[1mConsolidate compiler generated dependencies of target test_kinematics_node[0m
+[ 75%] [32m[1mLinking CXX executable test_kinematics_node[0m
+[100%] Built target test_kinematics_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/marsuser/so101_ws/install/so101_kinematics/include/so101_kinematics/so101_kinematics.hpp
+-- Symlinking: /home/marsuser/so101_ws/install/so101_kinematics/lib/so101_kinematics/test_kinematics_node
+-- Symlinking: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/environment/library_path.sh
+-- Symlinking: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/environment/library_path.dsv
+-- Symlinking: /home/marsuser/so101_ws/install/so101_kinematics/share/ament_index/resource_index/package_run_dependencies/so101_kinematics
+-- Symlinking: /home/marsuser/so101_ws/install/so101_kinematics/share/ament_index/resource_index/parent_prefix_path/so101_kinematics
+-- Symlinking: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/environment/ament_prefix_path.sh
+-- Symlinking: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/environment/ament_prefix_path.dsv
+-- Symlinking: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/environment/path.sh
+-- Symlinking: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/environment/path.dsv
+-- Symlinking: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/local_setup.bash
+-- Symlinking: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/local_setup.sh
+-- Symlinking: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/local_setup.zsh
+-- Symlinking: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/local_setup.dsv
+-- Symlinking: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/package.dsv
+-- Symlinking: /home/marsuser/so101_ws/install/so101_kinematics/share/ament_index/resource_index/packages/so101_kinematics
+-- Symlinking: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake/ament_cmake_export_targets-extras.cmake
+-- Symlinking: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake/so101_kinematicsConfig.cmake
+-- Symlinking: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake/so101_kinematicsConfig-version.cmake
+-- Symlinking: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/package.xml
+-- Up-to-date: /home/marsuser/so101_ws/install/so101_kinematics/lib/libso101_kinematics.so
+-- Up-to-date: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake/export_so101_kinematicsExport.cmake
+-- Up-to-date: /home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake/export_so101_kinematicsExport-noconfig.cmake

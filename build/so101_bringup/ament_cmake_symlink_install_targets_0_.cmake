@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/marsuser/so101_ws/build/so101_bringup/cartesian_controller_node" "/home/marsuser/so101_ws/build/so101_bringup/safety_gate_node" "/home/marsuser/so101_ws/build/so101_bringup/tcp_bridge_node" "TARGETS" "cartesian_controller_node" "safety_gate_node" "tcp_bridge_node" "DESTINATION" "lib/so101_bringup")

@@ -52,6 +52,15 @@ JOINT_ORDER = [
     "gripper",
 ]
 
+URDF_POSITION_LIMITS_RAD = {
+    "shoulder_pan": (-1.91986, 1.91986),
+    "shoulder_lift": (-1.74533, 1.74533),
+    "elbow_flex": (-1.69, 1.69),
+    "wrist_flex": (-1.65806, 1.65806),
+    "wrist_roll": (-2.74385, 2.84121),
+    "gripper": (-0.174533, 1.74533),
+}
+
 # Joints that stay in POSITION mode, driven by software-integrated velocity.
 # The firmware enforces their calibrated travel limits -- this is the real
 # safety net that VELOCITY/wheel mode does not provide.
@@ -164,13 +173,14 @@ class So101LeRobotServer:
             return self.bus.read("Present_Position", joint, normalize=False)
 
     def _raw_to_radians(self, joint: str, raw_tick: float) -> float:
-        """True physical angle from raw encoder ticks, independent of
-        whichever normalize mode (degrees / 0-100%) lerobot uses for that
-        joint's teleop convenience. Valid for every joint on this arm --
-        they're all the same STS3215 encoder."""
+        """Map calibrated encoder travel into the URDF joint coordinate."""
         cal = self.bus.calibration[joint]
-        mid = (cal.range_min + cal.range_max) / 2.0
-        return (raw_tick - mid) * (2.0 * math.pi / FEETECH_TICKS_PER_REV)
+        lower, upper = URDF_POSITION_LIMITS_RAD[joint]
+        raw_span = cal.range_max - cal.range_min
+        if raw_span <= 0:
+            raise ValueError(f"invalid calibration range for {joint}")
+        travel = (raw_tick - cal.range_min) / raw_span
+        return lower + travel * (upper - lower)
 
     def _gripper_percent_per_radian(self) -> float:
         cal = self.bus.calibration["gripper"]

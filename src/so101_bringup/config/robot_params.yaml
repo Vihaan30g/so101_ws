@@ -74,5 +74,6 @@ safety_gate_node:
 
     joint_cmd_timeout_ms: 100   # controller output staleness -> zero velocity (§7, §9)
     manipulability_hard_floor: 0.005  # below this even after DLS damping -> zero translational cmd
+    measured_position_tolerance_rad: 0.02  # encoder/calibration tolerance for current-state validation
 
     gripper_joint: "gripper"

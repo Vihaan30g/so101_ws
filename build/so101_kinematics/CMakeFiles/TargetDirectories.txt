@@ -1,0 +1,11 @@
+/home/marsuser/so101_ws/build/so101_kinematics/CMakeFiles/uninstall.dir
+/home/marsuser/so101_ws/build/so101_kinematics/CMakeFiles/so101_kinematics_uninstall.dir
+/home/marsuser/so101_ws/build/so101_kinematics/CMakeFiles/so101_kinematics.dir
+/home/marsuser/so101_ws/build/so101_kinematics/CMakeFiles/test_kinematics_node.dir
+/home/marsuser/so101_ws/build/so101_kinematics/CMakeFiles/test.dir
+/home/marsuser/so101_ws/build/so101_kinematics/CMakeFiles/edit_cache.dir
+/home/marsuser/so101_ws/build/so101_kinematics/CMakeFiles/rebuild_cache.dir
+/home/marsuser/so101_ws/build/so101_kinematics/CMakeFiles/list_install_components.dir
+/home/marsuser/so101_ws/build/so101_kinematics/CMakeFiles/install.dir
+/home/marsuser/so101_ws/build/so101_kinematics/CMakeFiles/install/local.dir
+/home/marsuser/so101_ws/build/so101_kinematics/CMakeFiles/install/strip.dir

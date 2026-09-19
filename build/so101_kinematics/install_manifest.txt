@@ -1,0 +1,3 @@
+/home/marsuser/so101_ws/install/so101_kinematics/lib/libso101_kinematics.so
+/home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake/export_so101_kinematicsExport.cmake
+/home/marsuser/so101_ws/install/so101_kinematics/share/so101_kinematics/cmake/export_so101_kinematicsExport-noconfig.cmake

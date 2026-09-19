@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/marsuser/so101_ws/build/so101_bringup/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

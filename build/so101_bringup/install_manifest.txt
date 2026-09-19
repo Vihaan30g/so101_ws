@@ -1,0 +1,1 @@
+/home/marsuser/so101_ws/install/so101_bringup/lib/so101_bringup/keyboard_servo
