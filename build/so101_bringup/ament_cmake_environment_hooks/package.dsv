@@ -1,4 +1,0 @@
-source;share/so101_bringup/local_setup.bash
-source;share/so101_bringup/local_setup.dsv
-source;share/so101_bringup/local_setup.sh
-source;share/so101_bringup/local_setup.zsh

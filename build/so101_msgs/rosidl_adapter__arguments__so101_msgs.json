@@ -1,9 +1,0 @@
-{
-  "package_name": "so101_msgs",
-  "non_idl_tuples": [
-    "/home/marsuser/so101_ws/src/so101_msgs:msg/CartesianCommand.msg",
-    "/home/marsuser/so101_ws/src/so101_msgs:msg/JointVelocityCommand.msg",
-    "/home/marsuser/so101_ws/src/so101_msgs:msg/JointCommand.msg",
-    "/home/marsuser/so101_ws/src/so101_msgs:msg/ControllerStatus.msg"
-  ]
-}
