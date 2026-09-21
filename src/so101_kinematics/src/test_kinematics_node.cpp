@@ -25,6 +25,8 @@ int main(int argc, char ** argv)
   if (argc >= 3) {
     cfg.end_effector_frame = argv[2];
   }
+    cfg.translational_joints = {"shoulder_pan", "shoulder_lift", "elbow_flex"};
+    cfg.wrist_joints = {"wrist_flex", "wrist_roll"};
 
   try {
     so101_kinematics::So101Kinematics kin(cfg);

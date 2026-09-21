@@ -1,0 +1,3 @@
+[console_scripts]
+keyboard_servo = so101_input_keyboard.keyboard_servo:main
+

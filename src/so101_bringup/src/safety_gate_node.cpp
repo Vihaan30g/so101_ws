@@ -75,7 +75,7 @@ public:
       [this](so101_msgs::msg::JointCommand::SharedPtr msg) { handleCommand(msg); });
 
     joint_state_sub_ = create_subscription<sensor_msgs::msg::JointState>(
-      "/joint_states", rclcpp::SensorDataQoS(),
+      "/actual_joint_states", rclcpp::SensorDataQoS(),
       [this](sensor_msgs::msg::JointState::SharedPtr msg) {
         std::lock_guard<std::mutex> lock(state_mutex_);
         latest_joint_state_ = *msg;
@@ -221,13 +221,9 @@ private:
 
     if (msg.control_mode == so101_msgs::msg::JointCommand::FROZEN_TRANSLATION) {
       safe_cmd = msg;
-      safe_cmd.velocities.assign(6, 0.0);
-      safe_cmd.velocities[0] = msg.velocities[0];
-      safe_cmd.velocities[1] = msg.velocities[1];
-      safe_cmd.velocities[2] = msg.velocities[2];
-      safe_cmd.velocities[3] = msg.velocities[3];
-      safe_cmd.velocities[4] = msg.velocities[4];
-      safe_cmd.velocities[5] = msg.velocities[5];
+      safe_cmd.velocities[0] = 0.0;
+      safe_cmd.velocities[1] = 0.0;
+      safe_cmd.velocities[2] = 0.0;
       return true;
     }
 

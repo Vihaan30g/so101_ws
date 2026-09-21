@@ -1,0 +1,18 @@
+# Per the design doc §4: joint limits are read directly from the URDF at
+# runtime (model.lowerPositionLimit / upperPositionLimit / velocityLimit)
+# so there is exactly one place to fix a wrong limit -- the URDF, not
+# application code or a YAML file that can drift out of sync with it.
+#
+# This file is intentionally NOT consumed by so101_kinematics. It's kept
+# here as a place to document limits you additionally want enforced at a
+# higher level than the URDF (e.g. a tighter "soft limit" for teleop that's
+# more conservative than the servo's absolute mechanical limit), which
+# so101_safety can optionally read in addition to the URDF-derived hard
+# limits. Not wired up yet -- see HANDOFF.md.
+#
+# Example shape, once you decide you want soft limits:
+#
+# so101_safety:
+#   ros__parameters:
+#     soft_position_margin_rad: 0.05   # stay this far inside URDF hard limits
+#     soft_velocity_scale: 0.8         # cap commanded velocity at 80% of URDF velocityLimit

@@ -35,7 +35,7 @@ ament_target_dependencies(tcp_bridge_node rclcpp sensor_msgs so101_msgs)
 
 # Installation
 install(
-  DIRECTORY launch config #rviz
+  DIRECTORY launch config
   DESTINATION share/${PROJECT_NAME}
 )
 

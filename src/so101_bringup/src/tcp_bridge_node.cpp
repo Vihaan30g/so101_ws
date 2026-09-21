@@ -27,6 +27,7 @@ public:
     reconnect_interval_ms_ = declare_parameter<int>("reconnect_interval_ms", 1000);
     command_rate_hz_ = declare_parameter<double>("command_rate_hz", 100.0);
     state_publish_hz_ = declare_parameter<double>("state_publish_hz", 50.0);
+    publish_legacy_joint_states_ = declare_parameter<bool>("publish_legacy_joint_states", true);
     // NOTE: staleness/timeout handling lives upstream (cartesian_controller_node's
     // per-input timeouts, safety_gate_node's command/state-age checks, and
     // lerobot_server.py's own watchdog) -- this bridge is a thin, dumb pipe and
@@ -42,7 +43,10 @@ public:
         have_pending_cmd_ = true;
       });
 
-    joint_state_pub_ = create_publisher<sensor_msgs::msg::JointState>("/joint_states", 10);
+    joint_state_pub_ = create_publisher<sensor_msgs::msg::JointState>("/actual_joint_states", 10);
+    if (publish_legacy_joint_states_) {
+      legacy_joint_state_pub_ = create_publisher<sensor_msgs::msg::JointState>("/joint_states", 10);
+    }
 
     send_timer_ = create_wall_timer(
       std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::duration<double>(1.0 / command_rate_hz_)),
@@ -159,6 +163,9 @@ private:
         state.position[i] = decoded->positions[i];
       }
       joint_state_pub_->publish(state);
+      if (legacy_joint_state_pub_) {
+        legacy_joint_state_pub_->publish(state);
+      }
     }
   }
 
@@ -167,6 +174,7 @@ private:
   int reconnect_interval_ms_{1000};
   double command_rate_hz_{100.0};
   double state_publish_hz_{50.0};
+  bool publish_legacy_joint_states_{true};
 
   std::vector<std::string> joint_order_;
   std::mutex cmd_mutex_;
@@ -177,6 +185,7 @@ private:
   std::atomic<bool> running_{true};
   rclcpp::Subscription<so101_msgs::msg::JointCommand>::SharedPtr cmd_sub_;
   rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr joint_state_pub_;
+  rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr legacy_joint_state_pub_;
   rclcpp::TimerBase::SharedPtr send_timer_;
   rclcpp::TimerBase::SharedPtr reconnect_timer_;
   std::thread read_thread_;

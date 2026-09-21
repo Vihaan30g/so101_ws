@@ -1,0 +1,258 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-7a6372de2da4a5aafc5a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "so101_msgs__py",
+					"jsonFile" : "directory-so101_msgs__py-1d1864844a6eed149fa3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/marsuser/so101_ws/build/so101_msgs/so101_msgs__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "so101_msgs__rs",
+					"jsonFile" : "directory-so101_msgs__rs-78e3ab9bd2eaf648ba07.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/marsuser/so101_ws/build/so101_msgs/so101_msgs__rs",
+					"targetIndexes" : 
+					[
+						16
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "so101_msgs",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_so101_msgs_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_so101_msgs_egg-4bec0166108050bad87a.json",
+					"name" : "ament_cmake_python_build_so101_msgs_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_so101_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_so101_msgs-822c8a54fc272b11d8f1.json",
+					"name" : "ament_cmake_python_copy_so101_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "so101_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-so101_msgs-8c350e8ffeaffd9959e2.json",
+					"name" : "so101_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "so101_msgs__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-so101_msgs__cpp-15ed9d8360e37560ee37.json",
+					"name" : "so101_msgs__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "so101_msgs__py::@1e427e208b07477171b1",
+					"jsonFile" : "target-so101_msgs__py-d0adcf33cd29e1aded89.json",
+					"name" : "so101_msgs__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "so101_msgs__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-so101_msgs__rosidl_generator_c-1f02a3c00b5fedb17184.json",
+					"name" : "so101_msgs__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "so101_msgs__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-so101_msgs__rosidl_generator_py-33300c6f632388697e48.json",
+					"name" : "so101_msgs__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "so101_msgs__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-so101_msgs__rosidl_typesupport_c-bdc149561d34967c3c2b.json",
+					"name" : "so101_msgs__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "so101_msgs__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-so101_msgs__rosidl_typesupport_c__pyext-8d59bd23e66bd2429251.json",
+					"name" : "so101_msgs__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "so101_msgs__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-so101_msgs__rosidl_typesupport_cpp-97b75cdbdcf20c2a22db.json",
+					"name" : "so101_msgs__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "so101_msgs__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-so101_msgs__rosidl_typesupport_fastrtps_c-6055fda97483181488ca.json",
+					"name" : "so101_msgs__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "so101_msgs__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-so101_msgs__rosidl_typesupport_fastrtps_c__pyext-ddc2fda1c95fe1c64134.json",
+					"name" : "so101_msgs__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "so101_msgs__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-so101_msgs__rosidl_typesupport_fastrtps_cpp-d6e42e0804b27113dd50.json",
+					"name" : "so101_msgs__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "so101_msgs__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-so101_msgs__rosidl_typesupport_introspection_c-9ed6e78d8207af41ee47.json",
+					"name" : "so101_msgs__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "so101_msgs__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-so101_msgs__rosidl_typesupport_introspection_c__pyext-c3dba37c11a7b32b7ee3.json",
+					"name" : "so101_msgs__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "so101_msgs__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-so101_msgs__rosidl_typesupport_introspection_cpp-c8aaeb1f867796cb3c38.json",
+					"name" : "so101_msgs__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "so101_msgs__rs::@cd393aec3b1e11ecd82a",
+					"jsonFile" : "target-so101_msgs__rs-41cb406e9fb66c78b9fe.json",
+					"name" : "so101_msgs__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "so101_msgs_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-so101_msgs_uninstall-52cfbd705151a15a72fe.json",
+					"name" : "so101_msgs_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-239c595072b0748088f5.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/marsuser/so101_ws/build/so101_msgs",
+		"source" : "/home/marsuser/so101_ws/src/so101_msgs"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

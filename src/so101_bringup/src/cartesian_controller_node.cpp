@@ -15,7 +15,7 @@
 //   /gripper_cmd     (std_msgs/Float64) -- direct teleop velocity for the
 //                     gripper joint (the 6th joint the original design
 //                     doc didn't account for -- see robot_params.yaml).
-//   /joint_states    (sensor_msgs/JointState) -- current measured joint
+//   /actual_joint_states (sensor_msgs/JointState) -- current measured joint
 //                     positions, needed to evaluate the Jacobian at the
 //                     current configuration. Published by tcp_bridge_node.
 //
@@ -148,7 +148,7 @@ public:
       });
 
     joint_state_sub_ = create_subscription<sensor_msgs::msg::JointState>(
-      "/joint_states", rclcpp::SensorDataQoS(),
+      "/actual_joint_states", rclcpp::SensorDataQoS(),
       [this](sensor_msgs::msg::JointState::SharedPtr msg) {
         std::lock_guard<std::mutex> lock(joint_state_mutex_);
         for (size_t i = 0; i < msg->name.size() && i < msg->position.size(); ++i) {
@@ -159,6 +159,8 @@ public:
 
     // --- Publishers ---
     joint_cmd_pub_ = create_publisher<so101_msgs::msg::JointCommand>("/joint_cmd", 10);
+    commanded_state_pub_ = create_publisher<sensor_msgs::msg::JointState>(
+      "/commanded_joint_states", 10);
     status_pub_ = create_publisher<so101_msgs::msg::ControllerStatus>("/controller_status", 10);
 
     const auto period = std::chrono::duration<double>(1.0 / control_rate_hz_);
@@ -200,28 +202,52 @@ private:
     if (!have_joint_state_) {
       RCLCPP_WARN_THROTTLE(
         get_logger(), *get_clock(), 2000,
-        "No /joint_states received yet -- cannot run IK, holding.");
+        "No /actual_joint_states received yet -- cannot run IK, holding.");
       publishZero(so101_msgs::msg::JointCommand::NORMAL);
       return;
     }
 
     const Eigen::VectorXd q = buildQ();
 
+    so101_msgs::msg::CartesianCommand cart;
+    bool cart_fresh = false;
+    {
+      std::lock_guard<std::mutex> lock(cart_mutex_);
+      cart = last_cart_;
+      cart_fresh = have_cart_ && !stale(last_cart_stamp_, cartesian_cmd_timeout_ms_);
+    }
+
+    const bool freeze_translation = cart_fresh && cart.freeze_translation;
+    if (freeze_translation && !translation_frozen_) {
+      frozen_ee_position_ = kin_->computeEndEffectorPosition(q);
+      if (cart.mode == "pose") {
+        frozen_input_position_ = Eigen::Vector3d(
+          cart.target_pose.position.x, cart.target_pose.position.y,
+          cart.target_pose.position.z);
+      }
+      have_freeze_anchor_ = true;
+    } else if (!freeze_translation && translation_frozen_ && have_freeze_anchor_ && cart.mode == "pose") {
+      const Eigen::Vector3d input_position(
+        cart.target_pose.position.x, cart.target_pose.position.y,
+        cart.target_pose.position.z);
+      resume_target_offset_ = frozen_ee_position_ - input_position;
+    }
+    translation_frozen_ = freeze_translation;
+
     // --- Translational velocity command (Cartesian, IK-controlled) ---
     Eigen::Vector3d v_cmd = Eigen::Vector3d::Zero();
     {
-      std::lock_guard<std::mutex> lock(cart_mutex_);
-      const bool cart_stale = !have_cart_ || stale(last_cart_stamp_, cartesian_cmd_timeout_ms_);
-      if (!cart_stale && last_cart_.valid) {
-        if (last_cart_.mode == "velocity") {
+      if (cart_fresh && cart.valid && !freeze_translation) {
+        if (cart.mode == "velocity") {
           v_cmd = Eigen::Vector3d(
-            last_cart_.velocity.linear.x, last_cart_.velocity.linear.y, last_cart_.velocity.linear.z);
-        } else if (last_cart_.mode == "pose") {
+            cart.velocity.linear.x, cart.velocity.linear.y, cart.velocity.linear.z);
+        } else if (cart.mode == "pose") {
           const Eigen::Vector3d ee_pos = kin_->computeEndEffectorPosition(q);
           const Eigen::Vector3d target(
-            last_cart_.target_pose.position.x, last_cart_.target_pose.position.y,
-            last_cart_.target_pose.position.z);
-          v_cmd = clampNorm(pose_mode_kp_ * (target - ee_pos), pose_mode_max_speed_);
+            cart.target_pose.position.x, cart.target_pose.position.y,
+            cart.target_pose.position.z);
+          const Eigen::Vector3d rebased_target = target + resume_target_offset_;
+          v_cmd = clampNorm(pose_mode_kp_ * (rebased_target - ee_pos), pose_mode_max_speed_);
         } else {
           RCLCPP_WARN_THROTTLE(
             get_logger(), *get_clock(), 2000, "Unknown CartesianCommand.mode '%s', holding.",
@@ -289,8 +315,11 @@ private:
       out.velocities.push_back(v);
     }
     out.velocities.push_back(gripper_vel);
-    out.control_mode = so101_msgs::msg::JointCommand::NORMAL;
+    out.control_mode = translation_frozen_ ?
+      so101_msgs::msg::JointCommand::FROZEN_TRANSLATION :
+      so101_msgs::msg::JointCommand::NORMAL;
     joint_cmd_pub_->publish(out);
+    publishCommandedState(out, q);
 
     // --- Status telemetry ---
     so101_msgs::msg::ControllerStatus status;
@@ -367,6 +396,28 @@ private:
     joint_cmd_pub_->publish(out);
   }
 
+  void publishCommandedState(const so101_msgs::msg::JointCommand & command, const Eigen::VectorXd & q)
+  {
+    if (!have_commanded_positions_) {
+      commanded_positions_.resize(joint_names_out_.size(), 0.0);
+      for (size_t i = 0; i < joint_names_out_.size(); ++i) {
+        const auto jid = kin_->model().getJointId(joint_names_out_[i]);
+        const int idx_q = kin_->model().joints[jid].idx_q();
+        commanded_positions_[i] = (idx_q >= 0 && idx_q < q.size()) ? q[idx_q] : 0.0;
+      }
+      have_commanded_positions_ = true;
+    }
+    const double dt = 1.0 / std::max(1.0, control_rate_hz_);
+    for (size_t i = 0; i < commanded_positions_.size() && i < command.velocities.size(); ++i) {
+      commanded_positions_[i] += command.velocities[i] * dt;
+    }
+    sensor_msgs::msg::JointState state;
+    state.header.stamp = now();
+    state.name = joint_names_out_;
+    state.position = commanded_positions_;
+    commanded_state_pub_->publish(state);
+  }
+
   // Parameters
   std::string urdf_path_, end_effector_frame_, gripper_joint_;
   std::vector<std::string> translational_joints_, wrist_joints_, joint_names_out_;
@@ -402,8 +453,17 @@ private:
   rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr gripper_sub_;
   rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr joint_state_sub_;
   rclcpp::Publisher<so101_msgs::msg::JointCommand>::SharedPtr joint_cmd_pub_;
+  rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr commanded_state_pub_;
   rclcpp::Publisher<so101_msgs::msg::ControllerStatus>::SharedPtr status_pub_;
   rclcpp::TimerBase::SharedPtr timer_;
+
+  bool translation_frozen_{false};
+  bool have_freeze_anchor_{false};
+  Eigen::Vector3d frozen_ee_position_{Eigen::Vector3d::Zero()};
+  Eigen::Vector3d frozen_input_position_{Eigen::Vector3d::Zero()};
+  Eigen::Vector3d resume_target_offset_{Eigen::Vector3d::Zero()};
+  bool have_commanded_positions_{false};
+  std::vector<double> commanded_positions_;
 };
 
 int main(int argc, char ** argv)

@@ -129,9 +129,29 @@ class So101LeRobotServer:
         cfg = SOFollowerRobotConfig(port=ROBOT_PORT, id=ROBOT_ID)
         robot = SOFollower(cfg)
         with self.motor_io_lock:
-            robot.connect(calibrate=False)  # connect() internally forces POSITION mode on ALL joints
+            calibration_path = os.path.expanduser(os.environ.get(
+                "SO101_CALIBRATION_FILE",
+                f"~/.cache/huggingface/lerobot/calibration/robots/so_follower/{ROBOT_ID}.json",
+            ))
+            if not os.path.isfile(calibration_path):
+                raise FileNotFoundError(
+                    f"LeRobot calibration file not found: {calibration_path}. "
+                    "Calibrate the SO-101 with the LeRobot tools first."
+                )
+            print(f"Using LeRobot calibration: {calibration_path}")
+            robot.connect(calibrate=False)  # use the stored calibration; do not recalibrate here
             self.robot = robot
             self.bus = robot.bus
+
+            missing_calibration = [j for j in JOINT_ORDER if j not in self.bus.calibration]
+            if missing_calibration:
+                raise RuntimeError(
+                    "LeRobot calibration is missing joints: " + ", ".join(missing_calibration)
+                )
+            print("Calibration ranges: " + ", ".join(
+                f"{j}=[{self.bus.calibration[j].range_min},{self.bus.calibration[j].range_max}]"
+                for j in JOINT_ORDER
+            ))
 
             # Seed integration targets from current measured position.
             obs = robot.get_observation()
