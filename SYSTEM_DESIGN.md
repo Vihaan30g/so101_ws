@@ -2,6 +2,10 @@
 
 ### **WORK IN PROGRESS**
 
+
+
+
+
 This workspace separates ROS 2 control logic from the LeRobot/Feetech hardware process. The hardware arm remains connected to the workstation; the future camera/IMU device only needs to publish the same ROS messages used by the keyboard test package.
 
 ## Architecture
