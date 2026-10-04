@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SO-101 Cartesian Servo Workspace | Vihaan Gupta</title>
+<meta name="description" content="Work in progress: a ROS 2 Cartesian control stack for the SO-101 robot arm, the base for a camera-based master arm and for imitation learning and reinforcement learning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--soft:#f6f8fa;--text:#1f2933;--muted:#5b6770;--line:#e1e5ea;--accent:#1d4ed8;--code:#0f172a;--codetext:#e2e8f0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.7;font-size:17px}
+header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
+.bar{max-width:900px;margin:auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.bar a{color:var(--text);text-decoration:none;font-weight:600;font-size:15px}
+.bar a:hover{color:var(--accent)}
+main{max-width:900px;margin:auto;padding:32px 20px 60px}
+h1{font-size:2.1rem;line-height:1.25;margin:.2em 0}
+h2{font-size:1.5rem;margin:2.4em 0 .6em;padding-bottom:.3em;border-bottom:1px solid var(--line)}
+h3{font-size:1.15rem;margin:1.6em 0 .4em}
+p{margin:.6em 0}
+p.lead{color:var(--muted);font-size:1.1rem}
+.meta{color:var(--muted);font-size:14px}
+a{color:var(--accent)}
+code{font-family:"JetBrains Mono",Consolas,monospace;font-size:.88em;background:var(--soft);border:1px solid var(--line);padding:1px 5px;border-radius:4px}
+.cb{position:relative;margin:14px 0}
+pre{margin:0;background:var(--code);color:var(--codetext);padding:16px 18px;border-radius:8px;overflow-x:auto;font-family:"JetBrains Mono",Consolas,monospace;font-size:14px;line-height:1.55}
+pre.tree{background:var(--soft);color:var(--text);border:1px solid var(--line);font-size:13px}
+.cb button{position:absolute;top:8px;right:8px;background:#334155;color:#e2e8f0;border:0;border-radius:5px;padding:4px 10px;font-size:12px;cursor:pointer}
+.cb button:hover{background:#475569}
+.note,.warn{padding:12px 16px;border-radius:6px;margin:16px 0;border-left:4px solid var(--accent);background:#eff4ff}
+.warn{border-color:#b45309;background:#fff7ed}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:14px 0;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:var(--soft)}
+nav.toc{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:14px 22px;margin:22px 0}
+nav.toc ol{margin:6px 0 0;padding-left:20px;columns:2;column-gap:32px}
+@media(max-width:640px){nav.toc ol{columns:1}}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+.btn{display:inline-block;padding:8px 16px;border-radius:6px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--accent);background:var(--accent);color:#fff}
+.btn:hover{background:#1e40af}
+.btn.alt{background:#fff;color:var(--accent)}
+.btn.alt:hover{background:#eff4ff}
+.fig{margin:14px 0;border:1px solid var(--line);border-radius:8px;background:#fff;padding:10px;text-align:center}
+.fig img{display:block;max-width:100%;height:auto;margin:auto;border-radius:4px;cursor:zoom-in}
+.fig figcaption{font-size:13.5px;color:var(--muted);margin-top:6px;line-height:1.4}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+@media(max-width:760px){.grid3{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}}
+.video{margin:18px 0}
+.video .frame{position:relative;padding-top:56.25%;border-radius:8px;overflow:hidden;background:#000;border:1px solid var(--line)}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video figcaption{font-size:14px;color:var(--muted);margin-top:6px}
+.video .local{margin:0 0 10px;padding:10px 14px;border-radius:6px;border-left:4px solid #b45309;background:#fff7ed;font-size:14px;line-height:1.5}
+ul.tight{margin:.4em 0;padding-left:20px}ul.tight li{margin:4px 0}
+.badge{display:inline-block;font-size:12px;font-weight:600;padding:2px 10px;border-radius:999px;background:#eff4ff;color:var(--accent);border:1px solid #c7d6fb;vertical-align:middle}
+.node{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:12px 12px;text-align:center;display:flex;flex-direction:column;justify-content:center;gap:2px}
+.node.hl{background:#eff4ff;border-color:var(--accent)}
+.node .step{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.node.hl .step{color:var(--accent)}
+.node strong{font-size:15px;line-height:1.3}
+.node small{font-size:12.5px;color:var(--muted);line-height:1.4}
+.node code{font-size:11.5px}
+.flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:6px;margin:14px 0}
+.flow .link{display:flex;flex-direction:column;align-items:center;color:var(--accent);width:112px}
+.flow .link svg{width:44px;height:16px}
+.flow .link span{font-size:11px;color:var(--muted);text-align:center;line-height:1.25;margin-top:3px;word-break:break-all;font-family:"JetBrains Mono",Consolas,monospace}
+@media(max-width:760px){.flow{grid-template-columns:1fr;justify-items:center}.flow .node{width:100%;max-width:340px}.flow .link{width:auto;flex-direction:row;gap:8px}.flow .link svg{transform:rotate(90deg);width:30px;height:30px}.flow .link span{margin-top:0}}
+.pipe{display:flex;flex-direction:column;align-items:center;gap:0;margin:18px 0}
+.pipe .node{width:100%;max-width:560px}
+.pipe .two{display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:560px}
+@media(max-width:560px){.pipe .two{grid-template-columns:1fr}}
+.pipe .down{color:var(--accent);height:30px;display:flex;align-items:center}
+.pipe .down svg{width:16px;height:26px}
+#lb{position:fixed;inset:0;background:rgba(15,23,42,.88);display:none;align-items:center;justify-content:center;z-index:50;padding:20px;cursor:zoom-out}
+#lb img{max-width:100%;max-height:100%;background:#fff;border-radius:6px}
+footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<header><div class="bar">
+  <a href="https://vihaan30g.github.io/">&larr; All Projects</a>
+  <a href="https://github.com/Vihaan30g/so101_ws">Repository</a>
+</div></header>
+<main>
+<p class="meta">Robotic Manipulation &middot; ROS 2 &middot; Teleoperation &middot; Imitation Learning &middot; Reinforcement Learning &middot; Last updated: October 2026</p>
+<h1>SO-101 Cartesian Servo Workspace <span class="badge" style="background:#fff7ed;color:#b45309;border-color:#f1c48f">Work in progress</span></h1>
+<p class="lead">A ROS 2 workspace for the SO-101 robot arm. It already lets the arm be driven in Cartesian space, and it is the base for a camera-based master arm and for training the arm with imitation learning and reinforcement learning.</p>
+
+<div class="warn"><strong>Much of this project is still to be done.</strong> Right now the repository contains only the Cartesian control stack. The camera-based master arm, imitation learning and reinforcement learning described below have not been built yet. They are plans, not results. See <a href="#roadmap">what is pending</a>.</div>
+
+<div class="btns">
+  <a class="btn" href="https://github.com/Vihaan30g/so101_ws">View repository on GitHub</a>
+  <a class="btn alt" href="#roadmap">What is pending</a>
+</div>
+
+<nav class="toc"><strong>Contents</strong>
+<ol>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#video">The robot</a></li>
+<li><a href="#built">What is built so far</a></li>
+<li><a href="#architecture">How it is put together</a></li>
+<li><a href="#control">How the control works</a></li>
+<li><a href="#roadmap">Roadmap: what is pending</a></li>
+<li><a href="#packages">Packages</a></li>
+<li><a href="#run">Running it</a></li>
+</ol></nav>
+
+<h2 id="overview">1. Overview</h2>
+<p>The <strong>SO-101</strong> is a low-cost, open-source 6-joint robot arm (shoulder pan, shoulder lift, elbow flex, wrist flex, wrist roll and a gripper). This project turns it into a platform for learning-based manipulation.</p>
+<p>Teaching a robot by demonstration usually needs a second, <em>master</em> arm that a person moves by hand, which means paying again for motors and 3D-printed parts. The aim here is to replace that master arm with <strong>computer vision</strong>, so that a camera, not a second arm full of actuators, captures the operator's motion. Once demonstrations can be recorded that way, the arm will be trained with <strong>imitation learning</strong> and <strong>reinforcement learning</strong>.</p>
+<p>The first step, and the only one completed so far, is the control layer: a ROS 2 stack that can move the arm's gripper in Cartesian space from any input device. The future camera-based master arm only has to publish the same ROS messages that the keyboard test node publishes today.</p>
+
+<h2 id="video">2. The robot</h2>
+<p>A short video (about 1 minute) of me with the assembled arm.</p>
+<figure class="video"><div class="frame"><iframe referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Fdt0XyOqaXA?rel=0&playsinline=1" title="The assembled SO-101 robot arm" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+<figcaption>The assembled SO-101 arm.</figcaption></figure>
+
+<h2 id="built">3. What is built so far</h2>
+<ul class="tight">
+<li><strong>Cartesian control.</strong> The gripper's position can be commanded as a velocity or as a target pose. A damped least-squares inverse-kinematics solver, built on the Pinocchio robotics library, turns Cartesian motion into joint velocities.</li>
+<li><strong>Direct wrist and gripper control.</strong> Wrist flex, wrist roll and the gripper are driven directly, outside the inverse-kinematics solver.</li>
+<li><strong>Freeze and resume.</strong> The operator can freeze the arm's translation while still adjusting the wrist and gripper, then resume without the arm jumping.</li>
+<li><strong>Safety gate.</strong> Every command passes a separate node that checks joint limits, velocity limits, stale state and invalid values before anything reaches the motors.</li>
+<li><strong>Hardware bridge.</strong> A small TCP link connects ROS 2 to the LeRobot and Feetech motor driver that talks to the real arm.</li>
+<li><strong>Live visualisation.</strong> Two models of the arm can be shown together in RViz2: the commanded pose (a semi-transparent "ghost") and the actual measured pose.</li>
+<li><strong>Keyboard input.</strong> A test node publishes exactly the messages the future camera-based device will use.</li>
+</ul>
+
+<h2 id="architecture">4. How it is put together</h2>
+<p>The stack keeps the ROS 2 control logic separate from the process that talks to the motors. The input device only publishes messages, so it can be swapped without touching the rest.</p>
+<div class="pipe">
+<div class="node"><span class="step">Input</span><strong>Keyboard today, camera-based master arm later</strong><small>Publishes Cartesian, wrist and gripper commands</small></div><div class="down"><svg viewBox="0 0 16 26" aria-hidden="true"><line x1="8" y1="2" x2="8" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M2 15l6 9 6-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="node hl"><span class="step">Node</span><strong>cartesian_controller_node</strong><small>Inverse kinematics: Cartesian command to joint velocities</small></div><div class="down"><svg viewBox="0 0 16 26" aria-hidden="true"><line x1="8" y1="2" x2="8" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M2 15l6 9 6-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="node hl"><span class="step">Node</span><strong>safety_gate_node</strong><small>Rejects unsafe commands (limits, stale or invalid data)</small></div><div class="down"><svg viewBox="0 0 16 26" aria-hidden="true"><line x1="8" y1="2" x2="8" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M2 15l6 9 6-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="node hl"><span class="step">Node</span><strong>tcp_bridge_node</strong><small>Sends the latest command over a local TCP link</small></div><div class="down"><svg viewBox="0 0 16 26" aria-hidden="true"><line x1="8" y1="2" x2="8" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M2 15l6 9 6-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="node"><span class="step">Process</span><strong>lerobot_server.py</strong><small>LeRobot / Feetech driver, with a watchdog</small></div><div class="down"><svg viewBox="0 0 16 26" aria-hidden="true"><line x1="8" y1="2" x2="8" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M2 15l6 9 6-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="node"><span class="step">Hardware</span><strong>SO-101 arm</strong><small>Six motors; positions are sent back as the actual joint state</small></div>
+</div>
+<p>The measured joint positions travel back the other way and feed the controller and the "actual" model in RViz2.</p>
+
+<h2 id="control">5. How the control works</h2>
+<h3>Cartesian behaviour</h3>
+<p>Only the three large joints (<code>shoulder_pan</code>, <code>shoulder_lift</code> and <code>elbow_flex</code>) take part in the Cartesian solution, which controls the gripper's <strong>position</strong>. <code>wrist_flex</code> and <code>wrist_roll</code> are direct orientation inputs, and the gripper is a direct velocity input. The controller accepts two modes: <code>velocity</code>, and <code>pose</code>, which uses proportional position control with a speed limit. Commands that go stale are treated as zero, so the arm stops if the input stops.</p>
+<h3>Freeze and resume</h3>
+<p>While freeze is on, the first three joints are held still and only the wrist and gripper respond. On release in pose mode, the device target is re-aligned to where the arm actually is, so it continues from there instead of jumping to the device's current position. The safety gate enforces the freeze again independently.</p>
+<h3>Safety</h3>
+<p>Joint limits and velocity limits come from the robot's URDF and are checked by the safety gate, alongside stale-state and finite-value checks and a watchdog in the motor server. These protections do <strong>not</strong> replace a hardware emergency stop. Self-collision checking is not available yet, so the arm should be tested at low speed, supervised and clear of people and obstacles.</p>
+
+<h2 id="roadmap">6. Roadmap: what is pending</h2>
+<div class="note">The control stack above is the only finished part. Everything in this table is still to be built.</div>
+<table>
+<tr><th>Planned work</th><th>What it will be</th><th>Status</th></tr>
+<tr><td><strong>Camera-based master arm</strong></td><td>A computer-vision system that tracks the operator's hand or motion and publishes the same ROS messages as the keyboard node, replacing a conventional master arm that needs its own actuators and 3D-printed parts.</td><td>Planned, next</td></tr>
+<tr><td><strong>Imitation learning</strong></td><td>Record demonstrations with the master arm and train the SO-101 to repeat the task.</td><td>Planned</td></tr>
+<tr><td><strong>Reinforcement learning</strong></td><td>Train the arm with reinforcement-learning frameworks.</td><td>Planned</td></tr>
+<tr><td><strong>Self-collision checking</strong></td><td>Currently reported as unavailable in the kinematics package.</td><td>Not implemented</td></tr>
+</table>
+<p>I will add these to the repository as they are built, so stay tuned.</p>
+
+<h2 id="packages">7. Packages</h2>
+<table>
+<tr><th>Package</th><th>Role</th></tr>
+<tr><td><code>so101_bringup</code></td><td>The controller, safety gate and TCP bridge nodes, the LeRobot server, the launch file and the shared parameters.</td></tr>
+<tr><td><code>so101_kinematics</code></td><td>Pinocchio-based kinematics library (Jacobian and damped least-squares IK) plus a test node.</td></tr>
+<tr><td><code>so101_msgs</code></td><td>Custom messages: <code>CartesianCommand</code>, <code>JointVelocityCommand</code>, <code>JointCommand</code> and <code>ControllerStatus</code>.</td></tr>
+<tr><td><code>so101_description</code></td><td>The robot's URDF, meshes and joint limits.</td></tr>
+<tr><td><code>so101_input_keyboard</code></td><td>Keyboard test input that mimics the future camera-based device.</td></tr>
+</table>
+
+<h2 id="run">8. Running it</h2>
+<p>Build the workspace, then start the motor server and the ROS stack:</p>
+<div class="cb"><pre>source /opt/ros/$ROS_DISTRO/setup.bash
+colcon build --symlink-install --base-paths src
+source install/setup.bash
+
+# terminal 1: the LeRobot motor server (start this first)
+python3 src/so101_bringup/scripts/lerobot_server.py
+
+# terminal 2: the ROS 2 stack
+ros2 launch so101_bringup so101_stack.launch.py
+
+# terminal 3: keyboard control
+ros2 run so101_input_keyboard keyboard_servo</pre></div>
+<table>
+<tr><th>Keys</th><th>Action</th></tr>
+<tr><td><code>i</code> / <code>k</code>, <code>j</code> / <code>l</code>, <code>u</code> / <code>o</code></td><td>Move the gripper along X, Y and Z</td></tr>
+<tr><td><code>a</code> / <code>d</code></td><td>Wrist flex</td></tr>
+<tr><td><code>z</code> / <code>x</code></td><td>Wrist roll</td></tr>
+<tr><td><code>[</code> / <code>]</code></td><td>Gripper</td></tr>
+<tr><td><code>b</code></td><td>Toggle translation freeze</td></tr>
+<tr><td>space</td><td>Stop all motion</td></tr>
+<tr><td><code>q</code></td><td>Quit</td></tr>
+</table>
+<p>This needs ROS 2, the Pinocchio library, the LeRobot SDK with its calibration for your arm, and a connected SO-101. Full details are in the repository's README.</p>
+
+</main>
+<footer>Written by Vihaan Gupta &middot; <a href="https://github.com/Vihaan30g">GitHub</a> &middot; <a href="https://github.com/Vihaan30g/so101_ws">This repository</a> &middot; <a href="https://www.youtube.com/@vihaan30g">YouTube</a> &middot; <a href="mailto:vihaan30g@gmail.com">vihaan30g@gmail.com</a></footer>
+<div id="lb"><img alt=""></div>
+<script>
+document.querySelectorAll('.cb').forEach(function(b){
+  var btn=document.createElement('button');btn.textContent='Copy';
+  btn.onclick=function(){
+    var t=b.querySelector('pre').innerText;
+    (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy'},1500)}).catch(function(){btn.textContent='Press Ctrl+C'});
+  };
+  b.appendChild(btn);
+});
+var lb=document.getElementById('lb'),lbi=lb.querySelector('img');
+document.querySelectorAll('.fig img').forEach(function(i){
+  i.addEventListener('click',function(){lbi.src=i.src;lbi.alt=i.alt;lb.style.display='flex'});
+});
+lb.addEventListener('click',function(){lb.style.display='none'});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.style.display='none'});
+// YouTube cannot play embedded videos on pages opened straight from disk (file://).
+if (location.protocol === 'file:') {
+  var first = document.querySelector('.video');
+  if (first) {
+    var d = document.createElement('div');
+    d.className = 'local';
+    d.innerHTML = '<strong>Videos will not play inline here.</strong> You opened this page as a local file, and YouTube only plays embedded videos on pages served over http(s). View it on GitHub Pages, or run <code>python3 -m http.server</code> in the repository folder and open <code>http://localhost:8000</code>.';
+    first.parentNode.insertBefore(d, first);
+  }
+}
+</script>
+</body>
+</html>
