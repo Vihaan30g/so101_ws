@@ -1,0 +1,25 @@
+# MoveIt uses this configuration for controller management
+
+moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
+
+moveit_simple_controller_manager:
+  controller_names:
+    - body_grp_controller
+    - eef_grp_controller
+
+  body_grp_controller:
+    type: FollowJointTrajectory
+    joints:
+      - shoulder_pan
+      - shoulder_lift
+      - elbow_flex
+      - wrist_flex
+      - wrist_roll
+    action_ns: follow_joint_trajectory
+    default: true
+  eef_grp_controller:
+    type: FollowJointTrajectory
+    joints:
+      - gripper
+    action_ns: follow_joint_trajectory
+    default: true
