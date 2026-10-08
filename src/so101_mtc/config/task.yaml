@@ -1,0 +1,11 @@
+so101_pick_place_task:
+  ros__parameters:
+    # The pick pose matches the robot's default zero-joint end-effector pose.
+    object_x: 0.43136
+    object_y: -0.00001
+    object_z: 0.22647
+    place_x: 0.34
+    place_y: -0.00001
+    place_z: 0.22647
+    cylinder_height: 0.08
+    cylinder_radius: 0.022

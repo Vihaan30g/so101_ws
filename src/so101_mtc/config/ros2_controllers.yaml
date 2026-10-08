@@ -1,0 +1,35 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+    body_grp_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+    eef_grp_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+body_grp_controller:
+  ros__parameters:
+    joints:
+      - shoulder_pan
+      - shoulder_lift
+      - elbow_flex
+      - wrist_flex
+      - wrist_roll
+    command_interfaces:
+      - position
+      - velocity
+    state_interfaces:
+      - position
+      - velocity
+
+eef_grp_controller:
+  ros__parameters:
+    joints:
+      - gripper
+    command_interfaces:
+      - position
+      - velocity
+    state_interfaces:
+      - position
+      - velocity
