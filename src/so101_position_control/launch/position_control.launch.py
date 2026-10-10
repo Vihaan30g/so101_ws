@@ -9,6 +9,7 @@ def generate_launch_description():
         DeclareLaunchArgument('host', default_value='127.0.0.1'),
         DeclareLaunchArgument('port', default_value='50011'),
         DeclareLaunchArgument('command_topic', default_value='/so101/command/position'),
+        #DeclareLaunchArgument('command_topic', default_value='/joint_states'),
         DeclareLaunchArgument('state_topic', default_value='/so101/actual_joint_states'),
         Node(
             package='so101_position_control',
